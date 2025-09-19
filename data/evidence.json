@@ -1,0 +1,128 @@
+{
+    "repos": [
+        {
+            "title": "Portfolio Repository",
+            "description": "Main GitHub Pages portfolio site showcasing projects and capabilities with responsive design and dark mode theme.",
+            "url": "https://github.com/Me10101-01/Me10101-01.github.io",
+            "linkText": "View Repository →"
+        },
+        {
+            "title": "Automation Framework",
+            "description": "AI-driven automation solutions for process optimization, workflow management, and operational efficiency improvements.",
+            "url": "https://github.com/Me10101-01",
+            "linkText": "View Profile →"
+        },
+        {
+            "title": "Cybersecurity Tools",
+            "description": "Comprehensive security assessment tools, vulnerability scanners, and threat detection systems for robust digital defense.",
+            "url": "https://github.com/Me10101-01",
+            "linkText": "View Profile →"
+        },
+        {
+            "title": "Compliance System",
+            "description": "Automated compliance monitoring framework ensuring regulatory adherence and governance policy implementation.",
+            "url": "https://github.com/Me10101-01",
+            "linkText": "View Profile →"
+        },
+        {
+            "title": "Self-Audit Module",
+            "description": "Continuous monitoring and assessment system enabling automated self-audit capabilities and process improvements.",
+            "url": "https://github.com/Me10101-01",
+            "linkText": "View Profile →"
+        },
+        {
+            "title": "SNHU Capstone Project",
+            "description": "Academic capstone project integrating all core competencies into a unified platform demonstrating technical mastery.",
+            "url": "https://github.com/Me10101-01",
+            "linkText": "View Profile →"
+        }
+    ],
+    "sites": [
+        {
+            "title": "Portfolio Site",
+            "description": "Live GitHub Pages site demonstrating responsive design, dark mode theme, and interactive functionality.",
+            "url": "https://me10101-01.github.io",
+            "linkText": "Visit Site →"
+        },
+        {
+            "title": "Project Dashboard",
+            "description": "Interactive dashboard showcasing real-time project metrics, progress tracking, and performance analytics.",
+            "url": "#dashboard",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "Documentation Hub",
+            "description": "Comprehensive documentation portal providing detailed guides, API references, and implementation examples.",
+            "url": "#documentation",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "Automation Demo",
+            "description": "Live demonstration of automation capabilities showcasing AI-driven process optimization in action.",
+            "url": "#automation-demo",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "Security Scanner",
+            "description": "Web-based security assessment tool providing vulnerability scanning and threat analysis capabilities.",
+            "url": "#security-scanner",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "Compliance Portal",
+            "description": "Interactive compliance management portal enabling real-time monitoring and reporting of regulatory adherence.",
+            "url": "#compliance-portal",
+            "linkText": "Coming Soon →"
+        }
+    ],
+    "artifacts": [
+        {
+            "title": "CI/CD Pipeline",
+            "description": "Automated build and deployment pipeline ensuring continuous integration and delivery for GitHub Pages.",
+            "url": "https://github.com/Me10101-01/Me10101-01.github.io/actions",
+            "linkText": "View Actions →"
+        },
+        {
+            "title": "Security Scans",
+            "description": "Automated security scanning reports including vulnerability assessments, dependency checks, and threat analysis.",
+            "url": "#security-scans",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "Performance Metrics",
+            "description": "Comprehensive site performance monitoring including load times, accessibility scores, and optimization reports.",
+            "url": "#performance-metrics",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "Code Quality Reports",
+            "description": "Automated code quality analysis including linting results, complexity metrics, and improvement recommendations.",
+            "url": "#code-quality",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "Test Coverage",
+            "description": "Unit test coverage reports and integration test results ensuring code reliability and functionality.",
+            "url": "#test-coverage",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "Deployment Logs",
+            "description": "Detailed deployment logs and build artifacts showcasing successful continuous deployment processes.",
+            "url": "https://github.com/Me10101-01/Me10101-01.github.io/deployments",
+            "linkText": "View Deployments →"
+        },
+        {
+            "title": "Accessibility Audits",
+            "description": "Web accessibility compliance audits ensuring WCAG guidelines adherence and inclusive design principles.",
+            "url": "#accessibility-audits",
+            "linkText": "Coming Soon →"
+        },
+        {
+            "title": "SEO Analysis",
+            "description": "Search engine optimization analysis and recommendations for improved visibility and search rankings.",
+            "url": "#seo-analysis",
+            "linkText": "Coming Soon →"
+        }
+    ]
+}
