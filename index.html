@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me10101-01 - Strategickhaos DAO LLC</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Strategickhaos DAO LLC</h1>
+        <p>Personal GitHub Pages site for compliance repos and SNHU capstone projects</p>
+    </header>
+
+    <main>
+        <section class="grok-chat">
+            <h2>Grok AI Assistant</h2>
+            <div class="chat-container">
+                <div id="output" class="output-box">
+                    <p class="welcome-message">Welcome! Ask me anything and I'll use Grok AI to help you.</p>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="prompt" placeholder="Enter your prompt here..." />
+                    <button id="send-btn" onclick="sendPrompt()">Send</button>
+                </div>
+                <div class="config-section">
+                    <details>
+                        <summary>API Configuration</summary>
+                        <div class="config-options">
+                            <label>
+                                <input type="radio" name="api-type" value="localhost" checked>
+                                Local Grok (http://localhost:11434/run)
+                            </label>
+                            <label>
+                                <input type="radio" name="api-type" value="key">
+                                API Key
+                            </label>
+                            <input type="text" id="api-key" placeholder="Enter API key..." disabled>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Me10101-01. Licensed under MIT License.</p>
+    </footer>
+
+    <script src="assets/js/grok.js"></script>
+</body>
+</html>
