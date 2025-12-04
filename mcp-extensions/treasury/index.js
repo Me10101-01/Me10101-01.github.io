@@ -53,10 +53,12 @@ class Treasury {
    */
   async checkBilling() {
     console.log('Checking billing status');
-    // TODO: Implement billing check
+    // TODO: Implement actual billing status check
+    // This is a placeholder based on screenshot analysis
     return {
       status: 'warning',
-      message: 'Billing issue detected for StrategicKhaos Swarm Intelligence'
+      message: 'Please verify billing status in GitHub Enterprise settings',
+      action: 'Update payment method if needed'
     };
   }
 }

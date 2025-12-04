@@ -3,10 +3,10 @@
  * Full empire access module for comprehensive system control
  */
 
-const Queen = require('../queen/index.js');
-const Treasury = require('../treasury/index.js');
-const Academic = require('../academic/index.js');
-const Refinery = require('../refinery/index.js');
+const Queen = require('../queen');
+const Treasury = require('../treasury');
+const Academic = require('../academic');
+const Refinery = require('../refinery');
 
 class Sovereign {
   constructor(config = {}) {
