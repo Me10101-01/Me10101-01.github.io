@@ -1,13 +1,12 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const openpgp = require('openpgp');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// Middleware (using built-in Express parsers instead of deprecated body-parser)
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // NOTE: In production, add rate limiting middleware here:
 // const rateLimit = require('express-rate-limit');

@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: queen
-        image: gcr.io/PROJECT_ID/queen-signal-ingestion:latest
+        image: REPLACE_WITH_IMAGE_NAME
         ports:
         - containerPort: 3000
           name: http
