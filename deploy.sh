@@ -1,6 +1,8 @@
 #!/bin/bash
 # ESTRATEGI-KHAOS QUEEN - Google Cloud Run Deployment Script
 # This script deploys the Queen application to Google Cloud Run
+# 
+# PREREQUISITE: Make this script executable with: chmod +x deploy.sh
 
 set -e
 

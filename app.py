@@ -67,13 +67,17 @@ def health():
 def academic_intelligence():
     """Academic Intelligence Feed - 432 Hz Processing"""
     try:
+        # Validate JSON payload
+        data = request.get_json()
+        if data is None:
+            return jsonify({"error": "Invalid JSON payload", "frequency": "disrupted"}), 400
+        
         # GPG Verification
         expected_gpg_key = os.environ.get('GPG_KEY_ID', 'AE5519579584DEF5')
         gpg_key = request.headers.get('X-GPG-Key-ID')
         if gpg_key != expected_gpg_key:
             return jsonify({"error": "GPG verification failed", "frequency": "disrupted"}), 401
         
-        data = request.get_json()
         signal = {
             "id": str(uuid.uuid4()),
             "timestamp": datetime.now().isoformat(),
@@ -97,14 +101,20 @@ def academic_intelligence():
         })
         
     except Exception as e:
-        return jsonify({"error": str(e), "frequency": "disrupted"}), 400
+        # Generic error message for security
+        print(f"Error processing academic signal: {type(e).__name__}")
+        return jsonify({"error": "Signal processing failed", "frequency": "disrupted"}), 400
 
 @app.route('/webhooks/github', methods=['POST'])
 @limiter.limit("100/minute")
 def github_webhook():
     """GitHub PR Auto-Merge @ 432 Hz"""
     try:
+        # Validate JSON payload
         data = request.get_json()
+        if data is None:
+            return jsonify({"error": "Invalid JSON payload"}), 400
+        
         event = {
             "id": str(uuid.uuid4()),
             "timestamp": datetime.now().isoformat(),
@@ -136,7 +146,9 @@ def github_webhook():
         })
         
     except Exception as e:
-        return jsonify({"error": str(e)}), 400
+        # Generic error message for security
+        print(f"Error processing GitHub webhook: {type(e).__name__}")
+        return jsonify({"error": "Webhook processing failed"}), 400
 
 @app.route('/dashboard')
 def visual_dashboard():
