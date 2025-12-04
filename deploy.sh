@@ -31,7 +31,7 @@ const server = http.createServer(async (req, res) => {
   
   if (req.method === 'GET' && url === '/') {
     return res.end(JSON.stringify({
-      service: 'Estrategi-Khaos Queen',
+      service: 'Strategickhaos Queen',
       version: CONFIG.version,
       status: 'online',
       endpoints: ['/health', '/signals/academic', '/webhooks/github']
@@ -68,6 +68,7 @@ cat << 'PKG' > queen/package.json
 PKG
 
 # Create LLM Council structure
+counter=1
 for llm in llama1 llama2 llama3 llama4 llama5; do
   mkdir -p llm-council/$llm
   cat << DOCKERFILE > llm-council/$llm/Dockerfile
@@ -111,10 +112,11 @@ services:
   $llm:
     build: .
     ports:
-      - "500${llm: -1}:5000"
+      - "500${counter}:5000"
     environment:
       - MODEL_NAME=$llm
 COMPOSE
+  counter=$((counter + 1))
 done
 
 # Create main.py for LLM Council
