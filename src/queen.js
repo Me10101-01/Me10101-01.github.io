@@ -180,11 +180,13 @@ function determineHandler(classification) {
   return 'default-processor';
 }
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Queen.js signal ingestion service running on port ${PORT}`);
-  console.log(`Trusted GPG Key ID: ${TRUSTED_KEY_ID}`);
-  console.log('Ready to receive signals...');
-});
+// Start server only if not in test mode
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Queen.js signal ingestion service running on port ${PORT}`);
+    console.log(`Trusted GPG Key ID: ${TRUSTED_KEY_ID}`);
+    console.log('Ready to receive signals...');
+  });
+}
 
 module.exports = app;
