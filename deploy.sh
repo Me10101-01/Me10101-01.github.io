@@ -30,6 +30,8 @@ gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/$SERVICE_NAME
 
 echo ""
 echo "🌐 Deploying to Cloud Run..."
+# Note: GPG_KEY_ID is set here for the default deployment.
+# You can change this value to use a different GPG key for verification.
 gcloud run deploy $SERVICE_NAME \
   --image gcr.io/$GOOGLE_CLOUD_PROJECT/$SERVICE_NAME \
   --platform managed \

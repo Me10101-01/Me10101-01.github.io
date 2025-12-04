@@ -25,6 +25,8 @@ limiter = Limiter(
 app.register_error_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # SOVEREIGN DATA STORE
+# Note: This in-memory storage is suitable for Cloud Run with single instances.
+# For horizontal scaling with multiple instances, consider using Redis or a database.
 empire_data = {
     "queen_awakened": datetime.now(),
     "frequency": "432 Hz",
@@ -72,7 +74,7 @@ def academic_intelligence():
         if data is None:
             return jsonify({"error": "Invalid JSON payload", "frequency": "disrupted"}), 400
         
-        # GPG Verification
+        # GPG Verification (configurable via GPG_KEY_ID environment variable)
         expected_gpg_key = os.environ.get('GPG_KEY_ID', 'AE5519579584DEF5')
         gpg_key = request.headers.get('X-GPG-Key-ID')
         if gpg_key != expected_gpg_key:
@@ -130,7 +132,7 @@ def github_webhook():
         # Check for draft PRs to auto-merge
         if data.get("action") == "opened" and data.get("pull_request"):
             pr = data["pull_request"]
-            if not pr.get("draft"):
+            if not pr.get("draft") and pr.get("number") and pr.get("title"):
                 empire_data["pr_queue"].append({
                     "pr_number": pr["number"],
                     "title": pr["title"],
@@ -158,7 +160,9 @@ def visual_dashboard():
     <html>
     <head>
         <title>ESTRATEGI-KHAOS QUEEN - 432 Hz DASHBOARD</title>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" 
+                integrity="sha256-o2PNB9R8q5c7vaH0RxG0EYDvpz8qBVBfg7p+aCEcaXs=" 
+                crossorigin="anonymous"></script>
         <style>
             body { 
                 font-family: 'Courier New', monospace; 
