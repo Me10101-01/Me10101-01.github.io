@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.log
+
+# Node modules (if we add any Node.js tooling later)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Test files
+test-*.html
