@@ -1,0 +1,17 @@
+{
+  "organization": "Strategickhaos-Swarm-Intelligence",
+  "registry": "github",
+  "target": "enterprise",
+  "extensions": {
+    "directory": "./extensions",
+    "template": "default"
+  },
+  "testing": {
+    "framework": "jest",
+    "coverage": true
+  },
+  "deployment": {
+    "environment": "production",
+    "autoPublish": false
+  }
+}

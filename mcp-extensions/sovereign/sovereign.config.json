@@ -1,0 +1,23 @@
+{
+  "organization": "Strategickhaos-Swarm-Intelligence",
+  "node": "137",
+  "location": "Texas",
+  "enterprise": true,
+  "customAgents": true,
+  "modules": {
+    "refinery": true,
+    "queen": true,
+    "treasury": true,
+    "academic": true
+  },
+  "dashboard": {
+    "enabled": true,
+    "port": 3000,
+    "refreshInterval": 5000
+  },
+  "security": {
+    "auditLog": true,
+    "encryption": true,
+    "rbac": true
+  }
+}

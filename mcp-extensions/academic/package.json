@@ -1,0 +1,22 @@
+{
+  "name": "@strategickhaos/academic",
+  "version": "1.0.0",
+  "description": "SNHU email processing and academic integration tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "mcp",
+    "academic",
+    "snhu",
+    "strategickhaos"
+  ],
+  "author": "StrategicKhaos Swarm Intelligence <security@strategickhaos.ai>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Me10101-01/Me10101-01.github.io.git",
+    "directory": "mcp-extensions/academic"
+  }
+}

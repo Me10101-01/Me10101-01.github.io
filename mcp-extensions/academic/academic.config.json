@@ -1,0 +1,15 @@
+{
+  "institution": "SNHU",
+  "email": "REPLACE_WITH_YOUR_SNHU_EMAIL",
+  "capstoneProject": "StrategicKhaos DAO Compliance",
+  "semester": "Fall 2025",
+  "filters": {
+    "priority": ["assignments", "grades", "announcements"],
+    "categories": ["capstone", "coursework", "administrative"]
+  },
+  "automation": {
+    "autoRespond": true,
+    "templates": "./templates"
+  },
+  "note": "Replace email with your actual SNHU email address"
+}

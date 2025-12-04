@@ -1,0 +1,14 @@
+{
+  "apiUrl": "REPLACE_WITH_YOUR_QUEEN_API_URL",
+  "timeout": 30000,
+  "retries": 3,
+  "healthCheck": {
+    "enabled": true,
+    "interval": 60000
+  },
+  "authentication": {
+    "type": "bearer",
+    "tokenEnv": "QUEEN_API_TOKEN"
+  },
+  "note": "Set QUEEN_API_URL environment variable to override apiUrl"
+}

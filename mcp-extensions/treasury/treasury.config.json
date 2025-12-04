@@ -1,0 +1,14 @@
+{
+  "currency": "USD",
+  "timezone": "America/Chicago",
+  "fiscalYearStart": "01-01",
+  "enterprise": "StrategicKhaos Swarm Intelligence",
+  "billing": {
+    "provider": "github-enterprise",
+    "alertThreshold": 80
+  },
+  "reporting": {
+    "schedule": "daily",
+    "recipients": ["security@strategickhaos.ai"]
+  }
+}
