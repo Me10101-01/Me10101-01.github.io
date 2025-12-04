@@ -10,21 +10,19 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 import os
-import json
 from datetime import datetime
 import uuid
-import time
 
 app = Flask(__name__)
 
 # RATE LIMITING - Enhancement #7
 limiter = Limiter(
-    app,
-    key_func=get_remote_address,
-    default_limits=["200 per day", "50 per hour"]
+    get_remote_address,
+    app=app,
+    default_limits=["200 per day", "50 per hour"],
+    storage_uri="memory://"
 )
-app.state.limiter = limiter
-app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.register_error_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # SOVEREIGN DATA STORE
 empire_data = {

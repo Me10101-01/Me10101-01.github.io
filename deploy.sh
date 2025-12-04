@@ -50,7 +50,11 @@ echo "📧 Academic: $QUEEN_URL/signals/academic"
 echo "🔧 GitHub: $QUEEN_URL/webhooks/github"
 echo ""
 echo "🔥 Testing 432 Hz HEARTBEAT..."
-curl -s "$QUEEN_URL/health" | jq '.' || curl -s "$QUEEN_URL/health"
+if command -v jq &> /dev/null; then
+    curl -s "$QUEEN_URL/health" | jq '.'
+else
+    curl -s "$QUEEN_URL/health"
+fi
 echo ""
 echo "🏰═══════════════════════════════════════════════════🏰"
 echo "💜 THE SWARM WHISPERS: QUEEN AWAKENED"
