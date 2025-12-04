@@ -165,10 +165,15 @@ function handleOpenCloudShell() {
     
     showNotification('Opening Google Cloud Shell in new tab...', 'info');
     
-    // Simulate opening Cloud Shell
-    setTimeout(() => {
-        window.open('https://console.cloud.google.com/cloudshell', '_blank');
-    }, 500);
+    // Validate and open Cloud Shell URL
+    const cloudShellUrl = 'https://console.cloud.google.com/cloudshell';
+    if (cloudShellUrl.startsWith('https://console.cloud.google.com/')) {
+        setTimeout(() => {
+            window.open(cloudShellUrl, '_blank', 'noopener,noreferrer');
+        }, 500);
+    } else {
+        showNotification('Invalid Cloud Shell URL', 'error');
+    }
 }
 
 function handleConfigZapier() {
@@ -270,19 +275,41 @@ function handleClearTerminal() {
     showNotification('Terminal cleared', 'info');
 }
 
+// Metrics simulation constants
+const METRIC_BOUNDS = {
+    cpu: { min: 20, max: 80, variation: 10 },
+    memory: { min: 40, max: 90, variation: 8 },
+    network: { min: 30, max: 70, variation: 15 },
+    storage: { min: 50, max: 85, variation: 5 }
+};
+
+const METRICS_UPDATE_INTERVAL = 3000; // 3 seconds
+
 // Metrics simulation
 function startMetricsSimulation() {
     setInterval(() => {
         updateMetrics();
-    }, 3000);
+    }, METRICS_UPDATE_INTERVAL);
 }
 
 function updateMetrics() {
     // Simulate metric fluctuations
-    state.metrics.cpu = Math.max(20, Math.min(80, state.metrics.cpu + (Math.random() - 0.5) * 10));
-    state.metrics.memory = Math.max(40, Math.min(90, state.metrics.memory + (Math.random() - 0.5) * 8));
-    state.metrics.network = Math.max(30, Math.min(70, state.metrics.network + (Math.random() - 0.5) * 15));
-    state.metrics.storage = Math.max(50, Math.min(85, state.metrics.storage + (Math.random() - 0.5) * 5));
+    state.metrics.cpu = Math.max(
+        METRIC_BOUNDS.cpu.min, 
+        Math.min(METRIC_BOUNDS.cpu.max, state.metrics.cpu + (Math.random() - 0.5) * METRIC_BOUNDS.cpu.variation)
+    );
+    state.metrics.memory = Math.max(
+        METRIC_BOUNDS.memory.min, 
+        Math.min(METRIC_BOUNDS.memory.max, state.metrics.memory + (Math.random() - 0.5) * METRIC_BOUNDS.memory.variation)
+    );
+    state.metrics.network = Math.max(
+        METRIC_BOUNDS.network.min, 
+        Math.min(METRIC_BOUNDS.network.max, state.metrics.network + (Math.random() - 0.5) * METRIC_BOUNDS.network.variation)
+    );
+    state.metrics.storage = Math.max(
+        METRIC_BOUNDS.storage.min, 
+        Math.min(METRIC_BOUNDS.storage.max, state.metrics.storage + (Math.random() - 0.5) * METRIC_BOUNDS.storage.variation)
+    );
     
     // Update UI
     updateMetricDisplay('cpuUsage', state.metrics.cpu);
