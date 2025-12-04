@@ -94,27 +94,29 @@ curl -X POST http://localhost:3000/signals/academic \
 
 ### Production Deployment
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment instructions.
+**See [QUICKSTART.md](./QUICKSTART.md) for step-by-step deployment instructions.**
 
 **Quick deployment:**
 
 ```bash
-# 1. Build and push Docker image
-docker build -t gcr.io/YOUR_PROJECT_ID/queen-signal-ingestion:latest .
-docker push gcr.io/YOUR_PROJECT_ID/queen-signal-ingestion:latest
+# 1. Deploy to GKE
+./scripts/deploy.sh YOUR_PROJECT_ID
 
-# 2. Deploy to Kubernetes
-kubectl apply -f k8s/
+# 2. Get ingress IP and configure DNS
+./scripts/get-ingress-ip.sh
 
-# 3. Get ingress IP
-kubectl get ingress queen-signal-ingestion
+# 3. Point queen.strategickhaos.ai to the ingress IP
 
-# 4. Configure DNS A record
-# Point queen.strategickhaos.ai to the ingress IP
-
-# 5. Test
+# 4. Test
 curl https://queen.strategickhaos.ai/health
 ```
+
+## Documentation
+
+- **[QUICKSTART.md](./QUICKSTART.md)** - Get started in under 10 minutes
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Complete deployment guide
+- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - System architecture and design
+- **[SECURITY.md](./SECURITY.md)** - Security assessment and hardening guide
 
 ## API Endpoints
 
