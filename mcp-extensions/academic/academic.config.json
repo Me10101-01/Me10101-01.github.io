@@ -1,0 +1,14 @@
+{
+  "institution": "SNHU",
+  "email": "student@snhu.edu",
+  "capstoneProject": "StrategicKhaos DAO Compliance",
+  "semester": "Fall 2025",
+  "filters": {
+    "priority": ["assignments", "grades", "announcements"],
+    "categories": ["capstone", "coursework", "administrative"]
+  },
+  "automation": {
+    "autoRespond": true,
+    "templates": "./templates"
+  }
+}

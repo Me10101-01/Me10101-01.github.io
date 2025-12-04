@@ -1,0 +1,22 @@
+{
+  "name": "@strategickhaos/treasury",
+  "version": "1.0.0",
+  "description": "Financial signals processing and tracking for StrategicKhaos ecosystem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "mcp",
+    "treasury",
+    "financial",
+    "strategickhaos"
+  ],
+  "author": "StrategicKhaos Swarm Intelligence <security@strategickhaos.ai>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Me10101-01/Me10101-01.github.io.git",
+    "directory": "mcp-extensions/treasury"
+  }
+}

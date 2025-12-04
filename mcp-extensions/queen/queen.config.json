@@ -1,0 +1,13 @@
+{
+  "apiUrl": "https://congenial-space-telegram-7vw6r9vqgjgp3764-8080.app.github.dev",
+  "timeout": 30000,
+  "retries": 3,
+  "healthCheck": {
+    "enabled": true,
+    "interval": 60000
+  },
+  "authentication": {
+    "type": "bearer",
+    "tokenEnv": "QUEEN_API_TOKEN"
+  }
+}
