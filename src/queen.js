@@ -9,6 +9,14 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// NOTE: In production, add rate limiting middleware here:
+// const rateLimit = require('express-rate-limit');
+// const limiter = rateLimit({
+//   windowMs: 15 * 60 * 1000, // 15 minutes
+//   max: 100 // limit each IP to 100 requests per windowMs
+// });
+// app.use('/signals/', limiter);
+
 // GPG Key ID for signature verification
 const TRUSTED_KEY_ID = 'AE5519579584DEF5';
 
@@ -26,8 +34,16 @@ app.post('/signals/academic', async (req, res) => {
       body: req.body
     });
 
-    // Extract signal data
-    const signal = req.body;
+    // Basic input validation
+    const signal = req.body || {};
+    
+    // Validate content-type if body is present
+    if (Object.keys(signal).length === 0 && req.get('content-length') !== '0') {
+      return res.status(400).json({
+        error: 'Invalid request',
+        message: 'Request body must be valid JSON'
+      });
+    }
     
     // Verify GPG signature if present
     if (signal.signature && signal.signedContent) {

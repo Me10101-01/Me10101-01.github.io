@@ -29,20 +29,20 @@ echo ""
 echo "Step 2: Pushing to Google Container Registry..."
 docker push ${IMAGE_NAME}
 
-# Step 3: Update deployment manifest
+# Step 3: Create deployment manifest from template
 echo ""
-echo "Step 3: Updating Kubernetes manifest..."
-sed -i.bak "s|gcr.io/PROJECT_ID/queen-signal-ingestion:latest|${IMAGE_NAME}|g" k8s/deployment.yaml
+echo "Step 3: Creating Kubernetes manifest from template..."
+cat k8s/deployment.yaml.template | sed "s|REPLACE_WITH_IMAGE_NAME|${IMAGE_NAME}|g" > /tmp/deployment.yaml
 
 # Step 4: Apply Kubernetes manifests
 echo ""
 echo "Step 4: Deploying to Kubernetes..."
-kubectl apply -f k8s/deployment.yaml
+kubectl apply -f /tmp/deployment.yaml
 kubectl apply -f k8s/service.yaml
 kubectl apply -f k8s/ingress.yaml
 
-# Restore original manifest
-mv k8s/deployment.yaml.bak k8s/deployment.yaml
+# Clean up temporary file
+rm /tmp/deployment.yaml
 
 echo ""
 echo "========================================="
@@ -55,6 +55,7 @@ echo "  kubectl get pods -l app=queen"
 echo ""
 echo "To get ingress IP (may take a few minutes):"
 echo "  kubectl get ingress queen-signal-ingestion"
+echo "  # Or run: ./scripts/get-ingress-ip.sh"
 echo ""
 echo "To view logs:"
 echo "  kubectl logs -f deployment/queen-signal-ingestion"

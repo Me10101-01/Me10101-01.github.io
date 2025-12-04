@@ -30,11 +30,29 @@ gcloud auth configure-docker
 docker push gcr.io/YOUR_PROJECT_ID/queen-signal-ingestion:latest
 ```
 
-**Note:** Replace `YOUR_PROJECT_ID` with your actual GCP project ID in both the command and `k8s/deployment.yaml`.
+**Note:** Replace `YOUR_PROJECT_ID` with your actual GCP project ID. The deployment script (see below) automates this process.
 
 ## Step 2: Deploy to GKE
 
+### Option A: Using the automated deployment script (Recommended)
+
 ```bash
+# Run the deployment script with your GCP project ID
+./scripts/deploy.sh YOUR_PROJECT_ID
+```
+
+This script will:
+1. Build the Docker image
+2. Push to Google Container Registry
+3. Generate the deployment manifest from template with correct image name
+4. Apply all Kubernetes manifests
+
+### Option B: Manual deployment
+
+```bash
+# Create deployment manifest from template
+cat k8s/deployment.yaml.template | sed "s|REPLACE_WITH_IMAGE_NAME|gcr.io/YOUR_PROJECT_ID/queen-signal-ingestion:latest|g" > k8s/deployment.yaml
+
 # Apply Kubernetes manifests
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
@@ -204,15 +222,111 @@ kubectl apply -f k8s/deployment.yaml
 
 ## Security Considerations
 
-1. **GPG Verification:** The current implementation has a placeholder for GPG signature verification. To enable full verification:
-   - Import the trusted public key (AE5519579584DEF5) to the container
-   - Update `verifySignature()` function in `src/queen.js`
+### 1. GPG Signature Verification
 
-2. **Network Policies:** Consider adding Kubernetes NetworkPolicies to restrict traffic
+The current implementation has a placeholder for GPG signature verification. To enable full verification:
 
-3. **Secrets Management:** Use Kubernetes Secrets or a secret manager for sensitive data
+**Step 1: Import the trusted public key**
+```bash
+# Import the public key (AE5519579584DEF5) into a file
+# Option A: From a keyserver
+gpg --recv-keys AE5519579584DEF5
+gpg --export -a AE5519579584DEF5 > public-key.asc
 
-4. **Rate Limiting:** Consider adding rate limiting to prevent abuse
+# Option B: From a file you already have
+cp /path/to/your/public-key.asc public-key.asc
+```
+
+**Step 2: Create a Kubernetes Secret**
+```bash
+kubectl create secret generic gpg-public-key \
+  --from-file=public-key.asc=public-key.asc
+```
+
+**Step 3: Update deployment to mount the secret**
+Add to the deployment manifest:
+```yaml
+        volumeMounts:
+        - name: gpg-key
+          mountPath: /app/keys
+          readOnly: true
+      volumes:
+      - name: gpg-key
+        secret:
+          secretName: gpg-public-key
+```
+
+**Step 4: Update the verifySignature() function in src/queen.js**
+Replace the placeholder implementation with actual GPG verification using the mounted key file.
+
+### 2. Rate Limiting
+
+For production deployments, implement rate limiting to prevent abuse:
+
+**Option A: Application-level (recommended for development)**
+```bash
+npm install express-rate-limit
+```
+
+Then uncomment the rate limiting code in `src/queen.js`.
+
+**Option B: Infrastructure-level (recommended for production)**
+- Use Google Cloud Armor with rate limiting rules
+- Configure Cloud Load Balancer rate limiting
+- Use Kong or another API gateway with rate limiting
+
+### 3. Network Policies
+
+Consider adding Kubernetes NetworkPolicies to restrict traffic:
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: queen-network-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: queen
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: ingress-nginx
+    ports:
+    - protocol: TCP
+      port: 3000
+```
+
+### 4. Secrets Management
+
+Use Kubernetes Secrets or a secret manager for sensitive data:
+
+```bash
+# Create secret for environment variables
+kubectl create secret generic queen-env \
+  --from-literal=TRUSTED_KEY_ID=AE5519579584DEF5
+
+# Reference in deployment
+env:
+- name: TRUSTED_KEY_ID
+  valueFrom:
+    secretKeyRef:
+      name: queen-env
+      key: TRUSTED_KEY_ID
+```
+
+### 5. Container Security
+
+- Keep base image updated: `docker pull node:18-alpine`
+- Scan images for vulnerabilities: `docker scan gcr.io/PROJECT_ID/queen-signal-ingestion:latest`
+- Use GCR vulnerability scanning
+- Run containers as non-root user (add to Dockerfile):
+  ```dockerfile
+  USER node
+  ```
 
 ## Next Steps
 
