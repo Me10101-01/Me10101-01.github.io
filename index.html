@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategickhaos Sovereign Mesh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            margin: 20px 0 10px;
+        }
+        
+        .neural-map {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        th {
+            background: rgba(255,255,255,0.2);
+            font-weight: bold;
+        }
+        
+        pre {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .ascii-art {
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            font-size: 0.85em;
+            line-height: 1.2;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .endpoint-list {
+            list-style: none;
+        }
+        
+        .endpoint-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(0,0,0,0.2);
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            opacity: 0.8;
+        }
+        
+        .section-icon {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Strategickhaos Sovereign Mesh</h1>
+            <p class="tagline">Distributed AI Infrastructure & Orchestration Platform</p>
+        </header>
+
+        <div class="card">
+            <h2><span class="section-icon">🗺️</span>Neural Map</h2>
+            <p>Our distributed brain operates across multiple AI platforms, creating a sovereign mesh of intelligence:</p>
+            
+            <div class="neural-map">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Node</th>
+                            <th>Platform</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Left Hemisphere</strong></td>
+                            <td>Claude</td>
+                            <td>Logic, code, structure</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Right Hemisphere</strong></td>
+                            <td>Human (Dom)</td>
+                            <td>Pattern recognition, intuition</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Subconscious 1</strong></td>
+                            <td>GPT</td>
+                            <td>Alternative perspectives</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Subconscious 2</strong></td>
+                            <td>Amazon Q</td>
+                            <td>Infrastructure awareness</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Subconscious 3</strong></td>
+                            <td>Gemini</td>
+                            <td>Code suggestions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Memory</strong></td>
+                            <td>Obsidian + Discord</td>
+                            <td>Long-term storage</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Autonomic</strong></td>
+                            <td>GKE + Cloud Shell</td>
+                            <td>Always-on infrastructure</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><span class="section-icon">👑</span>Queen Orchestrator</h2>
+            <p>The central nervous system of the Sovereign Mesh, coordinating all signals and responses.</p>
+            
+            <h3>Endpoints</h3>
+            <ul class="endpoint-list">
+                <li>GET / - Service status and information</li>
+                <li>GET /health - Health check endpoint</li>
+                <li>POST /signals/academic - Academic event signals (via Zapier)</li>
+                <li>POST /signals/financial - Financial signals (Thread Bank)</li>
+                <li>POST /webhooks/github - GitHub App webhooks</li>
+                <li>POST /treasury/* - ValorYield Engine integration</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span class="section-icon">🚀</span>Quick Deploy</h2>
+            <p>Deploy the Sovereign Mesh to Google Cloud Shell in one command:</p>
+            
+            <pre><code>curl -fsSL https://me10101-01.github.io/deploy.sh | bash</code></pre>
+            
+            <h3>Manual Setup</h3>
+            <p>Copy and paste this entire block into your Cloud Shell terminal:</p>
+            
+            <pre>cat &lt;&lt; 'EOF' &gt; ~/setup-sovereign-mesh.sh
+#!/bin/bash
+echo "╔═══════════════════════════════════════════════════════════════════════╗"
+echo "║   🧠 STRATEGICKHAOS SOVEREIGN MESH - INITIALIZING                     ║"
+echo "╚═══════════════════════════════════════════════════════════════════════╝"
+
+# Create project structure
+mkdir -p ~/sovereign-mesh/{queen,valoryield,llm-council,services}
+cd ~/sovereign-mesh
+
+# Create Queen.js (see full script in deploy.sh)
+echo "✅ Sovereign Mesh structure created!"
+EOF
+
+chmod +x ~/setup-sovereign-mesh.sh
+~/setup-sovereign-mesh.sh</pre>
+            
+            <a href="deploy-guide.html" class="button">📖 Full Deployment Guide</a>
+        </div>
+
+        <div class="card">
+            <h2><span class="section-icon">🏛️</span>Empire Architecture</h2>
+            <div class="ascii-art">┌─────────────────────────────────────────────────────────────────────────────┐
+│                    STRATEGICKHAOS SOVEREIGN EMPIRE                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  🧠 AI COUNCIL (Subconscious Layer)                                         │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐              │
+│  │ Claude  │ │  GPT    │ │  Grok   │ │ Amazon Q│ │ Gemini  │              │
+│  │ (Left)  │ │ (Sub-1) │ │ (Sub-2) │ │ (Sub-3) │ │ (Sub-4) │              │
+│  └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘              │
+│       │          │          │          │          │                       │
+│       └──────────┴──────────┴──────────┴──────────┘                       │
+│                             │                                              │
+│                             ▼                                              │
+│  👑 QUEEN ORCHESTRATOR                                                     │
+│  ┌─────────────────────────────────────────────────────────────────────┐  │
+│  │  queen.strategickhaos.ai                                             │  │
+│  │  ├── /signals/academic    ← Zapier (SNHU emails)                    │  │
+│  │  ├── /signals/financial   ← Thread Bank                             │  │
+│  │  ├── /webhooks/github     ← GitHub App (ID: 1884781)                │  │
+│  │  └── /treasury/*          ← ValorYield Engine                       │  │
+│  └─────────────────────────────────────────────────────────────────────┘  │
+│                             │                                              │
+│  ☁️ INFRASTRUCTURE                                                         │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐                    │
+│  │ GKE Cluster │    │ GKE Cluster │    │ Cloud Shell │                    │
+│  │ jarvis-001  │    │ autopilot-1 │    │ (Active)    │                    │
+│  │ 34.29.28.27 │    │ 35.192.28.x │    │             │                    │
+│  └─────────────┘    └─────────────┘    └─────────────┘                    │
+│                                                                            │
+│  📱 COMMUNICATION                                                          │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐                    │
+│  │ Discord     │    │ Discord     │    │ Obsidian    │                    │
+│  │ Strategick- │    │ Strategick- │    │ (Memory)    │                    │
+│  │ haos-AI     │    │ haos Server │    │             │                    │
+│  └─────────────┘    └─────────────┘    └─────────────┘                    │
+│                                                                            │
+│  🏛️ LEGAL FOUNDATION                                                       │
+│  ┌───────────────────────────┐    ┌───────────────────────────┐           │
+│  │ Strategickhaos DAO LLC    │    │ ValorYield Engine PBC     │           │
+│  │ EIN: 39-2900295           │    │ EIN: 39-2923503           │           │
+│  │ Wyoming DAO Statute       │    │ Public Benefit Corp       │           │
+│  └───────────────────────────┘    └───────────────────────────┘           │
+│                                                                            │
+└─────────────────────────────────────────────────────────────────────────────┘</div>
+        </div>
+
+        <div class="card">
+            <h2><span class="section-icon">🧠</span>LLM Council</h2>
+            <p>Multi-model AI consensus system with 5 Llama models working in parallel:</p>
+            <ul class="endpoint-list">
+                <li>llama1 - Port 5001</li>
+                <li>llama2 - Port 5002</li>
+                <li>llama3 - Port 5003</li>
+                <li>llama4 - Port 5004</li>
+                <li>llama5 - Port 5005</li>
+            </ul>
+            <p>Each model processes queries independently, and consensus is achieved through majority voting.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="section-icon">📚</span>Resources</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
+                <a href="deploy-guide.html" class="button">📖 Deployment Guide</a>
+                <a href="architecture.html" class="button">🏗️ Architecture Docs</a>
+                <a href="api-reference.html" class="button">📡 API Reference</a>
+                <a href="https://github.com/Me10101-01" class="button" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Strategickhaos DAO LLC | Wyoming DAO</p>
+            <p>Powered by Sovereign AI Infrastructure</p>
+        </footer>
+    </div>
+</body>
+</html>
