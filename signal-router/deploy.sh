@@ -9,6 +9,15 @@ echo "   DEPLOYING SIGNAL ROUTING AUTHORITY"
 echo "🏛️════════════════════════════════════════════════🏛️"
 echo ""
 
+# Check for required environment variables
+if [ -z "$GOOGLE_CLOUD_PROJECT" ]; then
+    echo "❌ Error: GOOGLE_CLOUD_PROJECT environment variable is not set"
+    echo "   Please set it with: export GOOGLE_CLOUD_PROJECT=your-project-id"
+    exit 1
+fi
+echo "✓ Using project: $GOOGLE_CLOUD_PROJECT"
+echo ""
+
 # Verify files exist
 echo "📁 Verifying files..."
 if [ ! -f "Dockerfile" ]; then

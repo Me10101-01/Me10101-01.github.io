@@ -54,7 +54,14 @@ def route_signal(signal_type):
     
     # For POST requests, route the signal
     try:
-        payload = request.get_json() if request.is_json else {}
+        # Handle different content types
+        if request.is_json:
+            payload = request.get_json()
+        elif request.form:
+            payload = dict(request.form)
+        else:
+            payload = {'raw_data': request.get_data(as_text=True)}
+        
         headers = {'Content-Type': 'application/json'}
         
         # Add metadata to the signal
@@ -70,6 +77,7 @@ def route_signal(signal_type):
         
         # Forward to destination
         response = requests.post(destination, json=enriched_payload, headers=headers, timeout=10)
+        response.raise_for_status()  # Raise exception for HTTP errors
         
         return jsonify({
             'status': 'routed',
@@ -79,9 +87,23 @@ def route_signal(signal_type):
             'timestamp': datetime.utcnow().isoformat()
         }), 200
         
+    except requests.exceptions.RequestException as e:
+        return jsonify({
+            'error': 'Routing failed - network or HTTP error',
+            'signal_type': signal_type,
+            'message': str(e),
+            'timestamp': datetime.utcnow().isoformat()
+        }), 500
+    except (ValueError, KeyError) as e:
+        return jsonify({
+            'error': 'Routing failed - data processing error',
+            'signal_type': signal_type,
+            'message': str(e),
+            'timestamp': datetime.utcnow().isoformat()
+        }), 500
     except Exception as e:
         return jsonify({
-            'error': 'Routing failed',
+            'error': 'Routing failed - unexpected error',
             'signal_type': signal_type,
             'message': str(e),
             'timestamp': datetime.utcnow().isoformat()
