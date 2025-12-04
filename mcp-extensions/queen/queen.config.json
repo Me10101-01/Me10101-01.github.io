@@ -1,5 +1,5 @@
 {
-  "apiUrl": "https://congenial-space-telegram-7vw6r9vqgjgp3764-8080.app.github.dev",
+  "apiUrl": "${QUEEN_API_URL}",
   "timeout": 30000,
   "retries": 3,
   "healthCheck": {

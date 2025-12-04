@@ -6,7 +6,7 @@
 class Queen {
   constructor(config = {}) {
     this.config = {
-      apiUrl: process.env.QUEEN_API_URL || 'https://congenial-space-telegram-7vw6r9vqgjgp3764-8080.app.github.dev',
+      apiUrl: process.env.QUEEN_API_URL || 'http://localhost:8080',
       timeout: 30000,
       ...config
     };

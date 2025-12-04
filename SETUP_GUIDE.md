@@ -123,7 +123,11 @@ cd Me10101-01.github.io
 
 ```bash
 # Set Queen API URL (from Codespace PORTS tab)
-export QUEEN_API_URL="https://congenial-space-telegram-7vw6r9vqgjgp3764-8080.app.github.dev"
+# Replace with your actual Codespace URL
+export QUEEN_API_URL="https://your-codespace-url-8080.app.github.dev"
+
+# Example from screenshots (your URL will be different):
+# export QUEEN_API_URL="https://congenial-space-telegram-7vw6r9vqgjgp3764-8080.app.github.dev"
 
 # Set organization
 export MCP_ORG="Strategickhaos-Swarm-Intelligence"
@@ -132,11 +136,11 @@ export MCP_ORG="Strategickhaos-Swarm-Intelligence"
 ### 3. Test Queen Integration
 
 ```bash
-# Test health endpoint
+# Test health endpoint (replace URL with your actual URL)
 curl $QUEEN_API_URL/health
 
-# Test status endpoint
-curl $QUEEN_API_URL/status
+# Or use localhost if running locally
+curl http://localhost:8080/health
 ```
 
 ### 4. Deploy MCP Extensions
