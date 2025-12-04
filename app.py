@@ -176,7 +176,9 @@ def index():
                 ]
             }
         },
-        'codespace_url': 'https://congenial-space-telegram-7vw6r9vqgjgp3764-8080.app.github.dev',
+        'codespace_url': os.environ.get('CODESPACE_NAME', None) and 
+                        f"https://{os.environ.get('CODESPACE_NAME')}-{os.environ.get('PORT', 8080)}.app.github.dev" or
+                        f"http://localhost:{os.environ.get('PORT', 8080)}",
         'timestamp': datetime.now(timezone.utc).isoformat()
     }), 200
 

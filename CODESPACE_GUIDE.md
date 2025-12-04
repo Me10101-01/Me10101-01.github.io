@@ -26,7 +26,7 @@ The startup script automatically detects and displays this URL if running in a C
 
 **Manual detection:**
 ```bash
-CODESPACE_NAME="congenial-space-telegram-7vw6r9vqgjgp3764"  # Replace with your Codespace name
+CODESPACE_NAME="your-codespace-name-xxxxx"  # Replace with your Codespace name
 QUEEN_URL="https://$CODESPACE_NAME-8080.app.github.dev"
 echo "👑 QUEEN URL: $QUEEN_URL"
 ```

@@ -53,7 +53,7 @@ https://[CODESPACE-NAME]-8080.app.github.dev
 
 Set your Codespace URL:
 ```bash
-CODESPACE_NAME="congenial-space-telegram-7vw6r9vqgjgp3764"
+CODESPACE_NAME="your-codespace-name-xxxxx"
 QUEEN_URL="https://$CODESPACE_NAME-8080.app.github.dev"
 echo "👑 QUEEN URL: $QUEEN_URL"
 ```
