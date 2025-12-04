@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SovereignMesh Dashboard | Strategic Khaos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>👑 SovereignMesh Dashboard</h1>
+            <p class="tagline">Nation-State Infrastructure Control Center</p>
+            <div class="status-badge" id="systemStatus">
+                <span class="status-indicator"></span>
+                <span>System Status: Operational</span>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <!-- System Overview -->
+            <section class="card overview-card">
+                <h2>🌐 System Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="clusterCount">3</div>
+                        <div class="stat-label">GKE Clusters</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="containerCount">130+</div>
+                        <div class="stat-label">Containers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="serviceCount">12</div>
+                        <div class="stat-label">Active Services</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="uptimePercent">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Queen.js Orchestrator -->
+            <section class="card queen-card">
+                <h2>👑 Queen.js Orchestrator</h2>
+                <div class="queen-status">
+                    <div class="status-row">
+                        <span class="label">Status:</span>
+                        <span class="value" id="queenStatus">Ready to Deploy</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="label">Endpoint:</span>
+                        <span class="value code" id="queenEndpoint">queen.strategickhaos.ai</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="label">Version:</span>
+                        <span class="value" id="queenVersion">v1.0.0</span>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="deployQueenBtn">Deploy to GKE</button>
+                    <button class="btn btn-secondary" id="testQueenBtn">Test Locally</button>
+                    <button class="btn btn-secondary" id="viewLogsBtn">View Logs</button>
+                </div>
+            </section>
+
+            <!-- Infrastructure -->
+            <section class="card infrastructure-card">
+                <h2>🏗️ Infrastructure</h2>
+                <div class="infrastructure-list">
+                    <div class="infra-item">
+                        <div class="infra-header">
+                            <span class="infra-name">🔵 jarvis-swarm-001</span>
+                            <span class="badge badge-active">Active</span>
+                        </div>
+                        <div class="infra-details">
+                            <span class="detail">Region: us-central1</span>
+                            <span class="detail">Nodes: 8</span>
+                            <span class="detail">Type: GKE Cluster</span>
+                        </div>
+                    </div>
+                    <div class="infra-item">
+                        <div class="infra-header">
+                            <span class="infra-name">🔵 autopilot-cluster-1</span>
+                            <span class="badge badge-active">Active</span>
+                        </div>
+                        <div class="infra-details">
+                            <span class="detail">Region: us-east1</span>
+                            <span class="detail">Mode: Autopilot</span>
+                            <span class="detail">Type: GKE Cluster</span>
+                        </div>
+                    </div>
+                    <div class="infra-item">
+                        <div class="infra-header">
+                            <span class="infra-name">🔵 sovereign-mesh-cluster</span>
+                            <span class="badge badge-pending">Pending</span>
+                        </div>
+                        <div class="infra-details">
+                            <span class="detail">Region: us-west1</span>
+                            <span class="detail">Nodes: 12</span>
+                            <span class="detail">Type: GKE Cluster</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Integrations -->
+            <section class="card integrations-card">
+                <h2>🔗 Integrations</h2>
+                <div class="integration-grid">
+                    <div class="integration-item">
+                        <div class="integration-icon">⚡</div>
+                        <div class="integration-name">Zapier</div>
+                        <div class="integration-status">Connected</div>
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon">🐙</div>
+                        <div class="integration-name">GitHub</div>
+                        <div class="integration-status">Connected</div>
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon">🤖</div>
+                        <div class="integration-name">Kiro CLI</div>
+                        <div class="integration-status">Installed</div>
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon">☁️</div>
+                        <div class="integration-name">Google Cloud</div>
+                        <div class="integration-status">Connected</div>
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon">🐳</div>
+                        <div class="integration-name">Docker</div>
+                        <div class="integration-status">Active</div>
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon">☸️</div>
+                        <div class="integration-name">Kubernetes</div>
+                        <div class="integration-status">Active</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deployment Pipeline -->
+            <section class="card deployment-card">
+                <h2>🚀 Deployment Pipeline</h2>
+                <div class="pipeline-steps">
+                    <div class="step step-complete">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Cloud Shell Setup</div>
+                            <div class="step-status">✓ Complete</div>
+                        </div>
+                    </div>
+                    <div class="step step-complete">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Kiro CLI Installation</div>
+                            <div class="step-status">✓ Complete</div>
+                        </div>
+                    </div>
+                    <div class="step step-complete">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Queen.js Bootstrap</div>
+                            <div class="step-status">✓ Complete</div>
+                        </div>
+                    </div>
+                    <div class="step step-active">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Deploy to GKE</div>
+                            <div class="step-status">⏳ In Progress</div>
+                        </div>
+                    </div>
+                    <div class="step step-pending">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <div class="step-title">DNS Configuration</div>
+                            <div class="step-status">⏸ Pending</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="card actions-card">
+                <h2>⚡ Quick Actions</h2>
+                <div class="quick-actions">
+                    <button class="action-btn" id="viewProjectsBtn">
+                        <span class="action-icon">📊</span>
+                        <span class="action-text">View Projects</span>
+                    </button>
+                    <button class="action-btn" id="openCloudShellBtn">
+                        <span class="action-icon">💻</span>
+                        <span class="action-text">Open Cloud Shell</span>
+                    </button>
+                    <button class="action-btn" id="configZapierBtn">
+                        <span class="action-icon">⚙️</span>
+                        <span class="action-text">Configure Zapier</span>
+                    </button>
+                    <button class="action-btn" id="viewDocsBtn">
+                        <span class="action-icon">📚</span>
+                        <span class="action-text">Documentation</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Command Center -->
+            <section class="card terminal-card">
+                <h2>💻 Command Center</h2>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Cloud Shell Terminal</span>
+                        <button class="terminal-btn" id="clearTerminalBtn">Clear</button>
+                    </div>
+                    <div class="terminal-body" id="terminalOutput">
+                        <div class="terminal-line">$ gcloud projects list</div>
+                        <div class="terminal-line output">PROJECT_ID: strategic-khaos-prod</div>
+                        <div class="terminal-line output">NAME: StrategicKhaos Production</div>
+                        <div class="terminal-line">$ kubectl get clusters</div>
+                        <div class="terminal-line output">jarvis-swarm-001     RUNNING   us-central1</div>
+                        <div class="terminal-line output">autopilot-cluster-1  RUNNING   us-east1</div>
+                        <div class="terminal-line prompt">$ <span class="cursor">_</span></div>
+                    </div>
+                    <div class="terminal-input-container">
+                        <input type="text" class="terminal-input" id="terminalInput" placeholder="Enter command...">
+                        <button class="btn btn-small" id="executeCommandBtn">Execute</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Metrics -->
+            <section class="card metrics-card">
+                <h2>📈 System Metrics</h2>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">CPU Usage</span>
+                            <span class="metric-value" id="cpuUsage">34%</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-bar-fill" style="width: 34%"></div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">Memory Usage</span>
+                            <span class="metric-value" id="memoryUsage">58%</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-bar-fill" style="width: 58%"></div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">Network I/O</span>
+                            <span class="metric-value" id="networkIO">2.3 GB/s</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-bar-fill" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">Storage</span>
+                            <span class="metric-value" id="storage">67%</span>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-bar-fill" style="width: 67%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>SovereignMesh Dashboard v1.0.0 | Strategic Khaos DAO LLC</p>
+            <p>Connected to Google Cloud Platform | Status: Operational 🟢</p>
+        </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
