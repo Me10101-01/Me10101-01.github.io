@@ -64,7 +64,7 @@ This repository contains the **ESTRATEGI-KHAOS QUEEN** application - a 432 Hz fr
      --region us-central1 \
      --allow-unauthenticated \
      --memory 1Gi \
-     --set-env-vars="PORT=8080"
+     --set-env-vars="PORT=8080,GPG_KEY_ID=AE5519579584DEF5"
    ```
 
 5. **Get your service URL**:

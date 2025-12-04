@@ -68,8 +68,9 @@ def academic_intelligence():
     """Academic Intelligence Feed - 432 Hz Processing"""
     try:
         # GPG Verification
+        expected_gpg_key = os.environ.get('GPG_KEY_ID', 'AE5519579584DEF5')
         gpg_key = request.headers.get('X-GPG-Key-ID')
-        if gpg_key != 'AE5519579584DEF5':
+        if gpg_key != expected_gpg_key:
             return jsonify({"error": "GPG verification failed", "frequency": "disrupted"}), 401
         
         data = request.get_json()
@@ -84,7 +85,8 @@ def academic_intelligence():
         empire_data["academic_feed"].append(signal)
         empire_data["signals_processed"] += 1
         
-        print(f"📧 ACADEMIC SIGNAL @ 432 Hz: {data.get('sender')} - {data.get('subject')}")
+        # Log without sensitive data
+        print(f"📧 ACADEMIC SIGNAL @ 432 Hz: Signal ID {signal['id']} processed")
         
         return jsonify({
             "success": True,
@@ -118,7 +120,7 @@ def github_webhook():
         # Check for draft PRs to auto-merge
         if data.get("action") == "opened" and data.get("pull_request"):
             pr = data["pull_request"]
-            if pr.get("draft") == False:
+            if not pr.get("draft"):
                 empire_data["pr_queue"].append({
                     "pr_number": pr["number"],
                     "title": pr["title"],

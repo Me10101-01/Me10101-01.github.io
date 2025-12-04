@@ -34,7 +34,7 @@ gcloud run deploy $SERVICE_NAME \
   --region $REGION \
   --allow-unauthenticated \
   --memory 1Gi \
-  --set-env-vars="PORT=8080"
+  --set-env-vars="PORT=8080,GPG_KEY_ID=AE5519579584DEF5"
 
 echo ""
 echo "🔍 Retrieving service URL..."
