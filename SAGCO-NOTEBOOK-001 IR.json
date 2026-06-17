@@ -1,0 +1,5499 @@
+{
+  "sagco_ir_version": "1.0",
+  "source": "/mnt/user-data/outputs/SAGCO-NOTEBOOK-001.xlsx",
+  "symbol_table_size": 119,
+  "sheet_count": 7,
+  "formula_count": 195,
+  "sheets": [
+    {
+      "id": 1,
+      "name": "FIELD DATA",
+      "row_count": 8,
+      "cell_count": 127,
+      "string_refs": 35,
+      "rows": [
+        {
+          "r": 1,
+          "cells": [
+            {
+              "addr": "A1",
+              "type": "STRING",
+              "value": "SAGCO-NOTEBOOK-001 | FIELD BIAS ENGINE v1 | SHEET 1 \u2014 FIELD DATA"
+            },
+            {
+              "addr": "B1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P1",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 2,
+          "cells": [
+            {
+              "addr": "A2",
+              "type": "STRING",
+              "value": "PACK #"
+            },
+            {
+              "addr": "B2",
+              "type": "STRING",
+              "value": "CIRCUIT"
+            },
+            {
+              "addr": "C2",
+              "type": "STRING",
+              "value": "EQUIPMENT"
+            },
+            {
+              "addr": "D2",
+              "type": "STRING",
+              "value": "LNFT"
+            },
+            {
+              "addr": "E2",
+              "type": "STRING",
+              "value": "SQFT"
+            },
+            {
+              "addr": "F2",
+              "type": "STRING",
+              "value": "LNFT IN"
+            },
+            {
+              "addr": "G2",
+              "type": "STRING",
+              "value": "SQFT IN"
+            },
+            {
+              "addr": "H2",
+              "type": "STRING",
+              "value": "MEN"
+            },
+            {
+              "addr": "I2",
+              "type": "STRING",
+              "value": "10HR DAYS"
+            },
+            {
+              "addr": "J2",
+              "type": "STRING",
+              "value": "TOTAL HRS"
+            },
+            {
+              "addr": "K2",
+              "type": "STRING",
+              "value": "WEIGHT"
+            },
+            {
+              "addr": "L2",
+              "type": "STRING",
+              "value": "PER HOUR"
+            },
+            {
+              "addr": "M2",
+              "type": "STRING",
+              "value": "LNFT/HR"
+            },
+            {
+              "addr": "N2",
+              "type": "STRING",
+              "value": "SQFT/HR"
+            },
+            {
+              "addr": "O2",
+              "type": "STRING",
+              "value": "SQFT/LNFT"
+            },
+            {
+              "addr": "P2",
+              "type": "STRING",
+              "value": "NOTES"
+            }
+          ]
+        },
+        {
+          "r": 3,
+          "cells": [
+            {
+              "addr": "A3",
+              "type": "STRING",
+              "value": "PKG-001"
+            },
+            {
+              "addr": "B3",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C3",
+              "type": "STRING",
+              "value": "FURNACE-01"
+            },
+            {
+              "addr": "D3",
+              "type": "NUMBER",
+              "value": "120"
+            },
+            {
+              "addr": "E3",
+              "type": "NUMBER",
+              "value": "250.56"
+            },
+            {
+              "addr": "F3",
+              "type": "FORMULA",
+              "value": "1440",
+              "formula": "D3*12"
+            },
+            {
+              "addr": "G3",
+              "type": "FORMULA",
+              "value": "36080.64",
+              "formula": "E3*144"
+            },
+            {
+              "addr": "H3",
+              "type": "NUMBER",
+              "value": "3"
+            },
+            {
+              "addr": "I3",
+              "type": "NUMBER",
+              "value": "4"
+            },
+            {
+              "addr": "J3",
+              "type": "FORMULA",
+              "value": "120",
+              "formula": "H3*I3*10"
+            },
+            {
+              "addr": "K3",
+              "type": "NUMBER",
+              "value": "480"
+            },
+            {
+              "addr": "L3",
+              "type": "FORMULA",
+              "value": "4",
+              "formula": "IFERROR(K3/J3,\"\u2014\")"
+            },
+            {
+              "addr": "M3",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "IFERROR(D3/J3,\"\u2014\")"
+            },
+            {
+              "addr": "N3",
+              "type": "FORMULA",
+              "value": "2.088",
+              "formula": "IFERROR(E3/J3,\"\u2014\")"
+            },
+            {
+              "addr": "O3",
+              "type": "FORMULA",
+              "value": "2.088",
+              "formula": "IFERROR(E3/D3,\"\u2014\")"
+            },
+            {
+              "addr": "P3",
+              "type": "STRING",
+              "value": "RA install"
+            }
+          ]
+        },
+        {
+          "r": 4,
+          "cells": [
+            {
+              "addr": "A4",
+              "type": "STRING",
+              "value": "PKG-002"
+            },
+            {
+              "addr": "B4",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C4",
+              "type": "STRING",
+              "value": "FURNACE-02"
+            },
+            {
+              "addr": "D4",
+              "type": "NUMBER",
+              "value": "95"
+            },
+            {
+              "addr": "E4",
+              "type": "NUMBER",
+              "value": "198.4"
+            },
+            {
+              "addr": "F4",
+              "type": "FORMULA",
+              "value": "1140",
+              "formula": "D4*12"
+            },
+            {
+              "addr": "G4",
+              "type": "FORMULA",
+              "value": "28569.6",
+              "formula": "E4*144"
+            },
+            {
+              "addr": "H4",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "I4",
+              "type": "NUMBER",
+              "value": "3"
+            },
+            {
+              "addr": "J4",
+              "type": "FORMULA",
+              "value": "60",
+              "formula": "H4*I4*10"
+            },
+            {
+              "addr": "K4",
+              "type": "NUMBER",
+              "value": "320"
+            },
+            {
+              "addr": "L4",
+              "type": "FORMULA",
+              "value": "5.33333333333333",
+              "formula": "IFERROR(K4/J4,\"\u2014\")"
+            },
+            {
+              "addr": "M4",
+              "type": "FORMULA",
+              "value": "1.58333333333333",
+              "formula": "IFERROR(D4/J4,\"\u2014\")"
+            },
+            {
+              "addr": "N4",
+              "type": "FORMULA",
+              "value": "3.30666666666667",
+              "formula": "IFERROR(E4/J4,\"\u2014\")"
+            },
+            {
+              "addr": "O4",
+              "type": "FORMULA",
+              "value": "2.08842105263158",
+              "formula": "IFERROR(E4/D4,\"\u2014\")"
+            },
+            {
+              "addr": "P4",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 5,
+          "cells": [
+            {
+              "addr": "A5",
+              "type": "STRING",
+              "value": "PKG-003"
+            },
+            {
+              "addr": "B5",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C5",
+              "type": "STRING",
+              "value": "FURNACE-03"
+            },
+            {
+              "addr": "D5",
+              "type": "NUMBER",
+              "value": "140"
+            },
+            {
+              "addr": "E5",
+              "type": "NUMBER",
+              "value": "292.32"
+            },
+            {
+              "addr": "F5",
+              "type": "FORMULA",
+              "value": "1680",
+              "formula": "D5*12"
+            },
+            {
+              "addr": "G5",
+              "type": "FORMULA",
+              "value": "42094.08",
+              "formula": "E5*144"
+            },
+            {
+              "addr": "H5",
+              "type": "NUMBER",
+              "value": "3"
+            },
+            {
+              "addr": "I5",
+              "type": "NUMBER",
+              "value": "5"
+            },
+            {
+              "addr": "J5",
+              "type": "FORMULA",
+              "value": "150",
+              "formula": "H5*I5*10"
+            },
+            {
+              "addr": "K5",
+              "type": "NUMBER",
+              "value": "560"
+            },
+            {
+              "addr": "L5",
+              "type": "FORMULA",
+              "value": "3.73333333333333",
+              "formula": "IFERROR(K5/J5,\"\u2014\")"
+            },
+            {
+              "addr": "M5",
+              "type": "FORMULA",
+              "value": "0.933333333333333",
+              "formula": "IFERROR(D5/J5,\"\u2014\")"
+            },
+            {
+              "addr": "N5",
+              "type": "FORMULA",
+              "value": "1.9488",
+              "formula": "IFERROR(E5/J5,\"\u2014\")"
+            },
+            {
+              "addr": "O5",
+              "type": "FORMULA",
+              "value": "2.088",
+              "formula": "IFERROR(E5/D5,\"\u2014\")"
+            },
+            {
+              "addr": "P5",
+              "type": "STRING",
+              "value": "Insulation complete"
+            }
+          ]
+        },
+        {
+          "r": 6,
+          "cells": [
+            {
+              "addr": "A6",
+              "type": "STRING",
+              "value": "PKG-004"
+            },
+            {
+              "addr": "B6",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C6",
+              "type": "STRING",
+              "value": "FURNACE-04"
+            },
+            {
+              "addr": "D6",
+              "type": "NUMBER",
+              "value": "80"
+            },
+            {
+              "addr": "E6",
+              "type": "NUMBER",
+              "value": "167.04"
+            },
+            {
+              "addr": "F6",
+              "type": "FORMULA",
+              "value": "960",
+              "formula": "D6*12"
+            },
+            {
+              "addr": "G6",
+              "type": "FORMULA",
+              "value": "24053.76",
+              "formula": "E6*144"
+            },
+            {
+              "addr": "H6",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "I6",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "J6",
+              "type": "FORMULA",
+              "value": "40",
+              "formula": "H6*I6*10"
+            },
+            {
+              "addr": "K6",
+              "type": "NUMBER",
+              "value": "215"
+            },
+            {
+              "addr": "L6",
+              "type": "FORMULA",
+              "value": "5.375",
+              "formula": "IFERROR(K6/J6,\"\u2014\")"
+            },
+            {
+              "addr": "M6",
+              "type": "FORMULA",
+              "value": "2",
+              "formula": "IFERROR(D6/J6,\"\u2014\")"
+            },
+            {
+              "addr": "N6",
+              "type": "FORMULA",
+              "value": "4.176",
+              "formula": "IFERROR(E6/J6,\"\u2014\")"
+            },
+            {
+              "addr": "O6",
+              "type": "FORMULA",
+              "value": "2.088",
+              "formula": "IFERROR(E6/D6,\"\u2014\")"
+            },
+            {
+              "addr": "P6",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 7,
+          "cells": [
+            {
+              "addr": "A7",
+              "type": "STRING",
+              "value": "PKG-005"
+            },
+            {
+              "addr": "B7",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C7",
+              "type": "STRING",
+              "value": "FURNACE-05"
+            },
+            {
+              "addr": "D7",
+              "type": "NUMBER",
+              "value": "110"
+            },
+            {
+              "addr": "E7",
+              "type": "NUMBER",
+              "value": "229.68"
+            },
+            {
+              "addr": "F7",
+              "type": "FORMULA",
+              "value": "1320",
+              "formula": "D7*12"
+            },
+            {
+              "addr": "G7",
+              "type": "FORMULA",
+              "value": "33073.92",
+              "formula": "E7*144"
+            },
+            {
+              "addr": "H7",
+              "type": "NUMBER",
+              "value": "3"
+            },
+            {
+              "addr": "I7",
+              "type": "NUMBER",
+              "value": "4"
+            },
+            {
+              "addr": "J7",
+              "type": "FORMULA",
+              "value": "120",
+              "formula": "H7*I7*10"
+            },
+            {
+              "addr": "K7",
+              "type": "NUMBER",
+              "value": "410"
+            },
+            {
+              "addr": "L7",
+              "type": "FORMULA",
+              "value": "3.41666666666667",
+              "formula": "IFERROR(K7/J7,\"\u2014\")"
+            },
+            {
+              "addr": "M7",
+              "type": "FORMULA",
+              "value": "0.916666666666667",
+              "formula": "IFERROR(D7/J7,\"\u2014\")"
+            },
+            {
+              "addr": "N7",
+              "type": "FORMULA",
+              "value": "1.914",
+              "formula": "IFERROR(E7/J7,\"\u2014\")"
+            },
+            {
+              "addr": "O7",
+              "type": "FORMULA",
+              "value": "2.088",
+              "formula": "IFERROR(E7/D7,\"\u2014\")"
+            },
+            {
+              "addr": "P7",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 8,
+          "cells": [
+            {
+              "addr": "A8",
+              "type": "STRING",
+              "value": "TOTALS"
+            },
+            {
+              "addr": "B8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D8",
+              "type": "FORMULA",
+              "value": "545",
+              "formula": "SUM(D3:D7)"
+            },
+            {
+              "addr": "E8",
+              "type": "FORMULA",
+              "value": "1138",
+              "formula": "SUM(E3:E7)"
+            },
+            {
+              "addr": "F8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J8",
+              "type": "FORMULA",
+              "value": "490",
+              "formula": "SUM(J3:J7)"
+            },
+            {
+              "addr": "K8",
+              "type": "FORMULA",
+              "value": "1985",
+              "formula": "SUM(K3:K7)"
+            },
+            {
+              "addr": "L8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O8",
+              "type": "EMPTY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "DMS ENGINE",
+      "row_count": 7,
+      "cell_count": 56,
+      "string_refs": 14,
+      "rows": [
+        {
+          "r": 1,
+          "cells": [
+            {
+              "addr": "A1",
+              "type": "STRING",
+              "value": "SAGCO-NOTEBOOK-001 | SHEET 2 \u2014 DMS CONVERSION ENGINE"
+            },
+            {
+              "addr": "B1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H1",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 2,
+          "cells": [
+            {
+              "addr": "A2",
+              "type": "STRING",
+              "value": "DECIMAL\u00b0"
+            },
+            {
+              "addr": "B2",
+              "type": "STRING",
+              "value": "PACK REF"
+            },
+            {
+              "addr": "C2",
+              "type": "STRING",
+              "value": "DEG \u00b0"
+            },
+            {
+              "addr": "D2",
+              "type": "STRING",
+              "value": "MIN '"
+            },
+            {
+              "addr": "E2",
+              "type": "STRING",
+              "value": "SEC \""
+            },
+            {
+              "addr": "F2",
+              "type": "STRING",
+              "value": "DMS STRING"
+            },
+            {
+              "addr": "G2",
+              "type": "STRING",
+              "value": "NOTES"
+            },
+            {
+              "addr": "H2",
+              "type": "STRING",
+              "value": "STATUS"
+            }
+          ]
+        },
+        {
+          "r": 3,
+          "cells": [
+            {
+              "addr": "A3",
+              "type": "NUMBER",
+              "value": "17.25"
+            },
+            {
+              "addr": "B3",
+              "type": "STRING",
+              "value": "PKG-001"
+            },
+            {
+              "addr": "C3",
+              "type": "FORMULA",
+              "value": "17",
+              "formula": "INT(A3)"
+            },
+            {
+              "addr": "D3",
+              "type": "FORMULA",
+              "value": "15",
+              "formula": "INT((A3-INT(A3))*60)"
+            },
+            {
+              "addr": "E3",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "ROUND((((A3-INT(A3))*60)-INT((A3-INT(A3))*60))*60,0)"
+            },
+            {
+              "addr": "F3",
+              "type": "FORMULA",
+              "value": "17\u00b0 15' 0",
+              "formula": "C3&\"\u00b0 \"&D3&\"' \"&E3&\"\""
+            },
+            {
+              "addr": "G3",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H3",
+              "type": "FORMULA",
+              "value": "VALID",
+              "formula": "IF(A3>0,\"VALID\",\"CHECK\")"
+            }
+          ]
+        },
+        {
+          "r": 4,
+          "cells": [
+            {
+              "addr": "A4",
+              "type": "NUMBER",
+              "value": "28.5"
+            },
+            {
+              "addr": "B4",
+              "type": "STRING",
+              "value": "PKG-002"
+            },
+            {
+              "addr": "C4",
+              "type": "FORMULA",
+              "value": "28",
+              "formula": "INT(A4)"
+            },
+            {
+              "addr": "D4",
+              "type": "FORMULA",
+              "value": "30",
+              "formula": "INT((A4-INT(A4))*60)"
+            },
+            {
+              "addr": "E4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "ROUND((((A4-INT(A4))*60)-INT((A4-INT(A4))*60))*60,0)"
+            },
+            {
+              "addr": "F4",
+              "type": "FORMULA",
+              "value": "28\u00b0 30' 0",
+              "formula": "C4&\"\u00b0 \"&D4&\"' \"&E4&\"\""
+            },
+            {
+              "addr": "G4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H4",
+              "type": "FORMULA",
+              "value": "VALID",
+              "formula": "IF(A4>0,\"VALID\",\"CHECK\")"
+            }
+          ]
+        },
+        {
+          "r": 5,
+          "cells": [
+            {
+              "addr": "A5",
+              "type": "NUMBER",
+              "value": "45"
+            },
+            {
+              "addr": "B5",
+              "type": "STRING",
+              "value": "PKG-003"
+            },
+            {
+              "addr": "C5",
+              "type": "FORMULA",
+              "value": "45",
+              "formula": "INT(A5)"
+            },
+            {
+              "addr": "D5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "INT((A5-INT(A5))*60)"
+            },
+            {
+              "addr": "E5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "ROUND((((A5-INT(A5))*60)-INT((A5-INT(A5))*60))*60,0)"
+            },
+            {
+              "addr": "F5",
+              "type": "FORMULA",
+              "value": "45\u00b0 0' 0",
+              "formula": "C5&\"\u00b0 \"&D5&\"' \"&E5&\"\""
+            },
+            {
+              "addr": "G5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H5",
+              "type": "FORMULA",
+              "value": "VALID",
+              "formula": "IF(A5>0,\"VALID\",\"CHECK\")"
+            }
+          ]
+        },
+        {
+          "r": 6,
+          "cells": [
+            {
+              "addr": "A6",
+              "type": "NUMBER",
+              "value": "62.75"
+            },
+            {
+              "addr": "B6",
+              "type": "STRING",
+              "value": "PKG-004"
+            },
+            {
+              "addr": "C6",
+              "type": "FORMULA",
+              "value": "62",
+              "formula": "INT(A6)"
+            },
+            {
+              "addr": "D6",
+              "type": "FORMULA",
+              "value": "45",
+              "formula": "INT((A6-INT(A6))*60)"
+            },
+            {
+              "addr": "E6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "ROUND((((A6-INT(A6))*60)-INT((A6-INT(A6))*60))*60,0)"
+            },
+            {
+              "addr": "F6",
+              "type": "FORMULA",
+              "value": "62\u00b0 45' 0",
+              "formula": "C6&\"\u00b0 \"&D6&\"' \"&E6&\"\""
+            },
+            {
+              "addr": "G6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H6",
+              "type": "FORMULA",
+              "value": "VALID",
+              "formula": "IF(A6>0,\"VALID\",\"CHECK\")"
+            }
+          ]
+        },
+        {
+          "r": 7,
+          "cells": [
+            {
+              "addr": "A7",
+              "type": "NUMBER",
+              "value": "89.9"
+            },
+            {
+              "addr": "B7",
+              "type": "STRING",
+              "value": "PKG-005"
+            },
+            {
+              "addr": "C7",
+              "type": "FORMULA",
+              "value": "89",
+              "formula": "INT(A7)"
+            },
+            {
+              "addr": "D7",
+              "type": "FORMULA",
+              "value": "54",
+              "formula": "INT((A7-INT(A7))*60)"
+            },
+            {
+              "addr": "E7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "ROUND((((A7-INT(A7))*60)-INT((A7-INT(A7))*60))*60,0)"
+            },
+            {
+              "addr": "F7",
+              "type": "FORMULA",
+              "value": "89\u00b0 54' 0",
+              "formula": "C7&\"\u00b0 \"&D7&\"' \"&E7&\"\""
+            },
+            {
+              "addr": "G7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H7",
+              "type": "FORMULA",
+              "value": "VALID",
+              "formula": "IF(A7>0,\"VALID\",\"CHECK\")"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "SIN COS PROJECTION",
+      "row_count": 7,
+      "cell_count": 77,
+      "string_refs": 17,
+      "rows": [
+        {
+          "r": 1,
+          "cells": [
+            {
+              "addr": "A1",
+              "type": "STRING",
+              "value": "SAGCO-NOTEBOOK-001 | SHEET 3 \u2014 SIN/COS COORDINATE PROJECTION"
+            },
+            {
+              "addr": "B1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K1",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 2,
+          "cells": [
+            {
+              "addr": "A2",
+              "type": "STRING",
+              "value": "PACK REF"
+            },
+            {
+              "addr": "B2",
+              "type": "STRING",
+              "value": "DEG \u00b0"
+            },
+            {
+              "addr": "C2",
+              "type": "STRING",
+              "value": "MIN '"
+            },
+            {
+              "addr": "D2",
+              "type": "STRING",
+              "value": "SEC \""
+            },
+            {
+              "addr": "E2",
+              "type": "STRING",
+              "value": "DECIMAL\u00b0"
+            },
+            {
+              "addr": "F2",
+              "type": "STRING",
+              "value": "SIN"
+            },
+            {
+              "addr": "G2",
+              "type": "STRING",
+              "value": "COS"
+            },
+            {
+              "addr": "H2",
+              "type": "STRING",
+              "value": "N/S DELTA"
+            },
+            {
+              "addr": "I2",
+              "type": "STRING",
+              "value": "E/W DELTA"
+            },
+            {
+              "addr": "J2",
+              "type": "STRING",
+              "value": "COORD STRING"
+            },
+            {
+              "addr": "K2",
+              "type": "STRING",
+              "value": "NOTES"
+            }
+          ]
+        },
+        {
+          "r": 3,
+          "cells": [
+            {
+              "addr": "A3",
+              "type": "STRING",
+              "value": "PKG-001"
+            },
+            {
+              "addr": "B3",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C3",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D3",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "E3",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "B3+(C3/60)+(D3/3600)"
+            },
+            {
+              "addr": "F3",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "SIN(RADIANS(E3))"
+            },
+            {
+              "addr": "G3",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "COS(RADIANS(E3))"
+            },
+            {
+              "addr": "H3",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "F3"
+            },
+            {
+              "addr": "I3",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "G3"
+            },
+            {
+              "addr": "J3",
+              "type": "FORMULA",
+              "value": "0.000000N  1.000000E",
+              "formula": "TEXT(H3,\"0.000000\")&\"N  \"&TEXT(I3,\"0.000000\")&\"E\""
+            },
+            {
+              "addr": "K3",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 4,
+          "cells": [
+            {
+              "addr": "A4",
+              "type": "STRING",
+              "value": "PKG-002"
+            },
+            {
+              "addr": "B4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "E4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "B4+(C4/60)+(D4/3600)"
+            },
+            {
+              "addr": "F4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "SIN(RADIANS(E4))"
+            },
+            {
+              "addr": "G4",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "COS(RADIANS(E4))"
+            },
+            {
+              "addr": "H4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "F4"
+            },
+            {
+              "addr": "I4",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "G4"
+            },
+            {
+              "addr": "J4",
+              "type": "FORMULA",
+              "value": "0.000000N  1.000000E",
+              "formula": "TEXT(H4,\"0.000000\")&\"N  \"&TEXT(I4,\"0.000000\")&\"E\""
+            },
+            {
+              "addr": "K4",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 5,
+          "cells": [
+            {
+              "addr": "A5",
+              "type": "STRING",
+              "value": "PKG-003"
+            },
+            {
+              "addr": "B5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "E5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "B5+(C5/60)+(D5/3600)"
+            },
+            {
+              "addr": "F5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "SIN(RADIANS(E5))"
+            },
+            {
+              "addr": "G5",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "COS(RADIANS(E5))"
+            },
+            {
+              "addr": "H5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "F5"
+            },
+            {
+              "addr": "I5",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "G5"
+            },
+            {
+              "addr": "J5",
+              "type": "FORMULA",
+              "value": "0.000000N  1.000000E",
+              "formula": "TEXT(H5,\"0.000000\")&\"N  \"&TEXT(I5,\"0.000000\")&\"E\""
+            },
+            {
+              "addr": "K5",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 6,
+          "cells": [
+            {
+              "addr": "A6",
+              "type": "STRING",
+              "value": "PKG-004"
+            },
+            {
+              "addr": "B6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "E6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "B6+(C6/60)+(D6/3600)"
+            },
+            {
+              "addr": "F6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "SIN(RADIANS(E6))"
+            },
+            {
+              "addr": "G6",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "COS(RADIANS(E6))"
+            },
+            {
+              "addr": "H6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "F6"
+            },
+            {
+              "addr": "I6",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "G6"
+            },
+            {
+              "addr": "J6",
+              "type": "FORMULA",
+              "value": "0.000000N  1.000000E",
+              "formula": "TEXT(H6,\"0.000000\")&\"N  \"&TEXT(I6,\"0.000000\")&\"E\""
+            },
+            {
+              "addr": "K6",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 7,
+          "cells": [
+            {
+              "addr": "A7",
+              "type": "STRING",
+              "value": "PKG-005"
+            },
+            {
+              "addr": "B7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "E7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "B7+(C7/60)+(D7/3600)"
+            },
+            {
+              "addr": "F7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "SIN(RADIANS(E7))"
+            },
+            {
+              "addr": "G7",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "COS(RADIANS(E7))"
+            },
+            {
+              "addr": "H7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "F7"
+            },
+            {
+              "addr": "I7",
+              "type": "FORMULA",
+              "value": "1",
+              "formula": "G7"
+            },
+            {
+              "addr": "J7",
+              "type": "FORMULA",
+              "value": "0.000000N  1.000000E",
+              "formula": "TEXT(H7,\"0.000000\")&\"N  \"&TEXT(I7,\"0.000000\")&\"E\""
+            },
+            {
+              "addr": "K7",
+              "type": "EMPTY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "VERDICT ENGINE",
+      "row_count": 9,
+      "cell_count": 108,
+      "string_refs": 33,
+      "rows": [
+        {
+          "r": 1,
+          "cells": [
+            {
+              "addr": "A1",
+              "type": "STRING",
+              "value": "SAGCO-NOTEBOOK-001 | SHEET 4 \u2014 VERDICT ENGINE  |  V=(A/E)\u00d7100"
+            },
+            {
+              "addr": "B1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L1",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 2,
+          "cells": [
+            {
+              "addr": "A2",
+              "type": "STRING",
+              "value": "PACK REF"
+            },
+            {
+              "addr": "B2",
+              "type": "STRING",
+              "value": "CIRCUIT"
+            },
+            {
+              "addr": "C2",
+              "type": "STRING",
+              "value": "METRIC"
+            },
+            {
+              "addr": "D2",
+              "type": "STRING",
+              "value": "EXPECTED"
+            },
+            {
+              "addr": "E2",
+              "type": "STRING",
+              "value": "ACTUAL"
+            },
+            {
+              "addr": "F2",
+              "type": "STRING",
+              "value": "VARIANCE"
+            },
+            {
+              "addr": "G2",
+              "type": "STRING",
+              "value": "COVERAGE %"
+            },
+            {
+              "addr": "H2",
+              "type": "STRING",
+              "value": "VERDICT"
+            },
+            {
+              "addr": "I2",
+              "type": "STRING",
+              "value": "BIAS FLAG"
+            },
+            {
+              "addr": "J2",
+              "type": "STRING",
+              "value": "CONF SCORE"
+            },
+            {
+              "addr": "K2",
+              "type": "STRING",
+              "value": "DELTA CLASS"
+            },
+            {
+              "addr": "L2",
+              "type": "STRING",
+              "value": "NOTES"
+            }
+          ]
+        },
+        {
+          "r": 3,
+          "cells": [
+            {
+              "addr": "A3",
+              "type": "STRING",
+              "value": "PKG-001"
+            },
+            {
+              "addr": "B3",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C3",
+              "type": "STRING",
+              "value": "LNFT"
+            },
+            {
+              "addr": "D3",
+              "type": "NUMBER",
+              "value": "100"
+            },
+            {
+              "addr": "E3",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F3",
+              "type": "FORMULA",
+              "value": "-100",
+              "formula": "E3-D3"
+            },
+            {
+              "addr": "G3",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR((E3/D3)*100,0)"
+            },
+            {
+              "addr": "H3",
+              "type": "FORMULA",
+              "value": "\u274c UNPROVEN",
+              "formula": "IF(G3>=90,\"\u2705 PROVEN\",IF(G3>=70,\"\ud83d\udd36 PROMISING\",IF(G3>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))"
+            },
+            {
+              "addr": "I3",
+              "type": "FORMULA",
+              "value": "UNDER-BIAS",
+              "formula": "IF(F3<-10,\"UNDER-BIAS\",IF(F3>10,\"OVER-BIAS\",\"NEUTRAL\"))"
+            },
+            {
+              "addr": "J3",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(MAX(0,100-ABS(F3/D3*100)),0)"
+            },
+            {
+              "addr": "K3",
+              "type": "FORMULA",
+              "value": "WIDE",
+              "formula": "IF(ABS(F3)<=5,\"TIGHT\",IF(ABS(F3)<=15,\"MODERATE\",\"WIDE\"))"
+            },
+            {
+              "addr": "L3",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 4,
+          "cells": [
+            {
+              "addr": "A4",
+              "type": "STRING",
+              "value": "PKG-002"
+            },
+            {
+              "addr": "B4",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C4",
+              "type": "STRING",
+              "value": "SQFT"
+            },
+            {
+              "addr": "D4",
+              "type": "NUMBER",
+              "value": "100"
+            },
+            {
+              "addr": "E4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F4",
+              "type": "FORMULA",
+              "value": "-100",
+              "formula": "E4-D4"
+            },
+            {
+              "addr": "G4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR((E4/D4)*100,0)"
+            },
+            {
+              "addr": "H4",
+              "type": "FORMULA",
+              "value": "\u274c UNPROVEN",
+              "formula": "IF(G4>=90,\"\u2705 PROVEN\",IF(G4>=70,\"\ud83d\udd36 PROMISING\",IF(G4>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))"
+            },
+            {
+              "addr": "I4",
+              "type": "FORMULA",
+              "value": "UNDER-BIAS",
+              "formula": "IF(F4<-10,\"UNDER-BIAS\",IF(F4>10,\"OVER-BIAS\",\"NEUTRAL\"))"
+            },
+            {
+              "addr": "J4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(MAX(0,100-ABS(F4/D4*100)),0)"
+            },
+            {
+              "addr": "K4",
+              "type": "FORMULA",
+              "value": "WIDE",
+              "formula": "IF(ABS(F4)<=5,\"TIGHT\",IF(ABS(F4)<=15,\"MODERATE\",\"WIDE\"))"
+            },
+            {
+              "addr": "L4",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 5,
+          "cells": [
+            {
+              "addr": "A5",
+              "type": "STRING",
+              "value": "PKG-003"
+            },
+            {
+              "addr": "B5",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C5",
+              "type": "STRING",
+              "value": "MAN-HRS"
+            },
+            {
+              "addr": "D5",
+              "type": "NUMBER",
+              "value": "100"
+            },
+            {
+              "addr": "E5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F5",
+              "type": "FORMULA",
+              "value": "-100",
+              "formula": "E5-D5"
+            },
+            {
+              "addr": "G5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR((E5/D5)*100,0)"
+            },
+            {
+              "addr": "H5",
+              "type": "FORMULA",
+              "value": "\u274c UNPROVEN",
+              "formula": "IF(G5>=90,\"\u2705 PROVEN\",IF(G5>=70,\"\ud83d\udd36 PROMISING\",IF(G5>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))"
+            },
+            {
+              "addr": "I5",
+              "type": "FORMULA",
+              "value": "UNDER-BIAS",
+              "formula": "IF(F5<-10,\"UNDER-BIAS\",IF(F5>10,\"OVER-BIAS\",\"NEUTRAL\"))"
+            },
+            {
+              "addr": "J5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(MAX(0,100-ABS(F5/D5*100)),0)"
+            },
+            {
+              "addr": "K5",
+              "type": "FORMULA",
+              "value": "WIDE",
+              "formula": "IF(ABS(F5)<=5,\"TIGHT\",IF(ABS(F5)<=15,\"MODERATE\",\"WIDE\"))"
+            },
+            {
+              "addr": "L5",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 6,
+          "cells": [
+            {
+              "addr": "A6",
+              "type": "STRING",
+              "value": "PKG-004"
+            },
+            {
+              "addr": "B6",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C6",
+              "type": "STRING",
+              "value": "WEIGHT"
+            },
+            {
+              "addr": "D6",
+              "type": "NUMBER",
+              "value": "100"
+            },
+            {
+              "addr": "E6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F6",
+              "type": "FORMULA",
+              "value": "-100",
+              "formula": "E6-D6"
+            },
+            {
+              "addr": "G6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR((E6/D6)*100,0)"
+            },
+            {
+              "addr": "H6",
+              "type": "FORMULA",
+              "value": "\u274c UNPROVEN",
+              "formula": "IF(G6>=90,\"\u2705 PROVEN\",IF(G6>=70,\"\ud83d\udd36 PROMISING\",IF(G6>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))"
+            },
+            {
+              "addr": "I6",
+              "type": "FORMULA",
+              "value": "UNDER-BIAS",
+              "formula": "IF(F6<-10,\"UNDER-BIAS\",IF(F6>10,\"OVER-BIAS\",\"NEUTRAL\"))"
+            },
+            {
+              "addr": "J6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(MAX(0,100-ABS(F6/D6*100)),0)"
+            },
+            {
+              "addr": "K6",
+              "type": "FORMULA",
+              "value": "WIDE",
+              "formula": "IF(ABS(F6)<=5,\"TIGHT\",IF(ABS(F6)<=15,\"MODERATE\",\"WIDE\"))"
+            },
+            {
+              "addr": "L6",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 7,
+          "cells": [
+            {
+              "addr": "A7",
+              "type": "STRING",
+              "value": "PKG-005"
+            },
+            {
+              "addr": "B7",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C7",
+              "type": "STRING",
+              "value": "LNFT/HR"
+            },
+            {
+              "addr": "D7",
+              "type": "NUMBER",
+              "value": "100"
+            },
+            {
+              "addr": "E7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F7",
+              "type": "FORMULA",
+              "value": "-100",
+              "formula": "E7-D7"
+            },
+            {
+              "addr": "G7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR((E7/D7)*100,0)"
+            },
+            {
+              "addr": "H7",
+              "type": "FORMULA",
+              "value": "\u274c UNPROVEN",
+              "formula": "IF(G7>=90,\"\u2705 PROVEN\",IF(G7>=70,\"\ud83d\udd36 PROMISING\",IF(G7>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))"
+            },
+            {
+              "addr": "I7",
+              "type": "FORMULA",
+              "value": "UNDER-BIAS",
+              "formula": "IF(F7<-10,\"UNDER-BIAS\",IF(F7>10,\"OVER-BIAS\",\"NEUTRAL\"))"
+            },
+            {
+              "addr": "J7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(MAX(0,100-ABS(F7/D7*100)),0)"
+            },
+            {
+              "addr": "K7",
+              "type": "FORMULA",
+              "value": "WIDE",
+              "formula": "IF(ABS(F7)<=5,\"TIGHT\",IF(ABS(F7)<=15,\"MODERATE\",\"WIDE\"))"
+            },
+            {
+              "addr": "L7",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 8,
+          "cells": [
+            {
+              "addr": "A8",
+              "type": "STRING",
+              "value": "TOTALS"
+            },
+            {
+              "addr": "B8",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C8",
+              "type": "STRING",
+              "value": "SQFT/HR"
+            },
+            {
+              "addr": "D8",
+              "type": "NUMBER",
+              "value": "100"
+            },
+            {
+              "addr": "E8",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F8",
+              "type": "FORMULA",
+              "value": "-100",
+              "formula": "E8-D8"
+            },
+            {
+              "addr": "G8",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR((E8/D8)*100,0)"
+            },
+            {
+              "addr": "H8",
+              "type": "FORMULA",
+              "value": "\u274c UNPROVEN",
+              "formula": "IF(G8>=90,\"\u2705 PROVEN\",IF(G8>=70,\"\ud83d\udd36 PROMISING\",IF(G8>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))"
+            },
+            {
+              "addr": "I8",
+              "type": "FORMULA",
+              "value": "UNDER-BIAS",
+              "formula": "IF(F8<-10,\"UNDER-BIAS\",IF(F8>10,\"OVER-BIAS\",\"NEUTRAL\"))"
+            },
+            {
+              "addr": "J8",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(MAX(0,100-ABS(F8/D8*100)),0)"
+            },
+            {
+              "addr": "K8",
+              "type": "FORMULA",
+              "value": "WIDE",
+              "formula": "IF(ABS(F8)<=5,\"TIGHT\",IF(ABS(F8)<=15,\"MODERATE\",\"WIDE\"))"
+            },
+            {
+              "addr": "L8",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 10,
+          "cells": [
+            {
+              "addr": "A10",
+              "type": "STRING",
+              "value": "NOTEBOOK-001 EQUATION"
+            },
+            {
+              "addr": "B10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D10",
+              "type": "STRING",
+              "value": "V = (A / E) \u00d7 100   |   PROVEN \u2265 90%   |   PROMISING \u2265 70%   |   PARTIAL \u2265 50%   |   UNPROVEN < 50%"
+            },
+            {
+              "addr": "E10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L10",
+              "type": "EMPTY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "BIAS Q-POINT ENGINE",
+      "row_count": 8,
+      "cell_count": 128,
+      "string_refs": 28,
+      "rows": [
+        {
+          "r": 1,
+          "cells": [
+            {
+              "addr": "A1",
+              "type": "STRING",
+              "value": "SAGCO-NOTEBOOK-001 | SHEET 5 \u2014 BIAS / Q-POINT ENGINE  |  Transistor Analog: Scope as Signal"
+            },
+            {
+              "addr": "B1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P1",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 2,
+          "cells": [
+            {
+              "addr": "A2",
+              "type": "STRING",
+              "value": "Vcc=Supply/Scope  |  Rc=Restriction  |  Rb1=Upstream Constraint  |  Rb2=Downstream Constraint  |  Re=Rework/Backpressure  |  \u03b2=Crew Gain  |  Ic=Actual Flow  |  Ib=Base Input  |  Ie=Total Output  |  Vce=Usable Margin"
+            },
+            {
+              "addr": "B2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O2",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P2",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 3,
+          "cells": [
+            {
+              "addr": "A3",
+              "type": "STRING",
+              "value": "PACK REF"
+            },
+            {
+              "addr": "B3",
+              "type": "STRING",
+              "value": "CIRCUIT"
+            },
+            {
+              "addr": "C3",
+              "type": "STRING",
+              "value": "Vcc\nSUPPLY"
+            },
+            {
+              "addr": "D3",
+              "type": "STRING",
+              "value": "Rc\nRESTRICT"
+            },
+            {
+              "addr": "E3",
+              "type": "STRING",
+              "value": "Rb1\nUPSTREAM"
+            },
+            {
+              "addr": "F3",
+              "type": "STRING",
+              "value": "Rb2\nDNSTREAM"
+            },
+            {
+              "addr": "G3",
+              "type": "STRING",
+              "value": "Re\nFEEDBACK"
+            },
+            {
+              "addr": "H3",
+              "type": "STRING",
+              "value": "\u03b2 GAIN"
+            },
+            {
+              "addr": "I3",
+              "type": "STRING",
+              "value": "Ib BASE\nINPUT"
+            },
+            {
+              "addr": "J3",
+              "type": "STRING",
+              "value": "Ic COLL\nFLOW"
+            },
+            {
+              "addr": "K3",
+              "type": "STRING",
+              "value": "Ie EMIT\nOUTPUT"
+            },
+            {
+              "addr": "L3",
+              "type": "STRING",
+              "value": "Vce MARGIN"
+            },
+            {
+              "addr": "M3",
+              "type": "STRING",
+              "value": "EXPECTED\nFLOW"
+            },
+            {
+              "addr": "N3",
+              "type": "STRING",
+              "value": "ACTUAL\nFLOW"
+            },
+            {
+              "addr": "O3",
+              "type": "STRING",
+              "value": "Q-POINT"
+            },
+            {
+              "addr": "P3",
+              "type": "STRING",
+              "value": "STATUS"
+            }
+          ]
+        },
+        {
+          "r": 4,
+          "cells": [
+            {
+              "addr": "A4",
+              "type": "STRING",
+              "value": "PKG-001"
+            },
+            {
+              "addr": "B4",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C4",
+              "type": "NUMBER",
+              "value": "480"
+            },
+            {
+              "addr": "D4",
+              "type": "NUMBER",
+              "value": "20"
+            },
+            {
+              "addr": "E4",
+              "type": "NUMBER",
+              "value": "15"
+            },
+            {
+              "addr": "F4",
+              "type": "NUMBER",
+              "value": "10"
+            },
+            {
+              "addr": "G4",
+              "type": "NUMBER",
+              "value": "5"
+            },
+            {
+              "addr": "H4",
+              "type": "NUMBER",
+              "value": "2.5"
+            },
+            {
+              "addr": "I4",
+              "type": "NUMBER",
+              "value": "40"
+            },
+            {
+              "addr": "J4",
+              "type": "FORMULA",
+              "value": "100",
+              "formula": "H4*I4"
+            },
+            {
+              "addr": "K4",
+              "type": "FORMULA",
+              "value": "140",
+              "formula": "J4+I4"
+            },
+            {
+              "addr": "L4",
+              "type": "FORMULA",
+              "value": "-2220",
+              "formula": "IFERROR(C4-(J4*D4)-(K4*G4),0)"
+            },
+            {
+              "addr": "M4",
+              "type": "NUMBER",
+              "value": "400"
+            },
+            {
+              "addr": "N4",
+              "type": "FORMULA",
+              "value": "100",
+              "formula": "J4"
+            },
+            {
+              "addr": "O4",
+              "type": "FORMULA",
+              "value": "0.25",
+              "formula": "IFERROR(J4/M4,0)"
+            },
+            {
+              "addr": "P4",
+              "type": "FORMULA",
+              "value": "\ud83d\udd34 CUTOFF RISK",
+              "formula": "IF(O4>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O4>=0.7,\"\ud83d\udd36 PROMISING\",IF(O4>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O4>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))"
+            }
+          ]
+        },
+        {
+          "r": 5,
+          "cells": [
+            {
+              "addr": "A5",
+              "type": "STRING",
+              "value": "PKG-002"
+            },
+            {
+              "addr": "B5",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C5",
+              "type": "NUMBER",
+              "value": "300"
+            },
+            {
+              "addr": "D5",
+              "type": "NUMBER",
+              "value": "10"
+            },
+            {
+              "addr": "E5",
+              "type": "NUMBER",
+              "value": "8"
+            },
+            {
+              "addr": "F5",
+              "type": "NUMBER",
+              "value": "5"
+            },
+            {
+              "addr": "G5",
+              "type": "NUMBER",
+              "value": "3"
+            },
+            {
+              "addr": "H5",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "I5",
+              "type": "NUMBER",
+              "value": "30"
+            },
+            {
+              "addr": "J5",
+              "type": "FORMULA",
+              "value": "60",
+              "formula": "H5*I5"
+            },
+            {
+              "addr": "K5",
+              "type": "FORMULA",
+              "value": "90",
+              "formula": "J5+I5"
+            },
+            {
+              "addr": "L5",
+              "type": "FORMULA",
+              "value": "-570",
+              "formula": "IFERROR(C5-(J5*D5)-(K5*G5),0)"
+            },
+            {
+              "addr": "M5",
+              "type": "NUMBER",
+              "value": "280"
+            },
+            {
+              "addr": "N5",
+              "type": "FORMULA",
+              "value": "60",
+              "formula": "J5"
+            },
+            {
+              "addr": "O5",
+              "type": "FORMULA",
+              "value": "0.214285714285714",
+              "formula": "IFERROR(J5/M5,0)"
+            },
+            {
+              "addr": "P5",
+              "type": "FORMULA",
+              "value": "\ud83d\udd34 CUTOFF RISK",
+              "formula": "IF(O5>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O5>=0.7,\"\ud83d\udd36 PROMISING\",IF(O5>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O5>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))"
+            }
+          ]
+        },
+        {
+          "r": 6,
+          "cells": [
+            {
+              "addr": "A6",
+              "type": "STRING",
+              "value": "PKG-003"
+            },
+            {
+              "addr": "B6",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C6",
+              "type": "NUMBER",
+              "value": "600"
+            },
+            {
+              "addr": "D6",
+              "type": "NUMBER",
+              "value": "25"
+            },
+            {
+              "addr": "E6",
+              "type": "NUMBER",
+              "value": "20"
+            },
+            {
+              "addr": "F6",
+              "type": "NUMBER",
+              "value": "12"
+            },
+            {
+              "addr": "G6",
+              "type": "NUMBER",
+              "value": "8"
+            },
+            {
+              "addr": "H6",
+              "type": "NUMBER",
+              "value": "3"
+            },
+            {
+              "addr": "I6",
+              "type": "NUMBER",
+              "value": "50"
+            },
+            {
+              "addr": "J6",
+              "type": "FORMULA",
+              "value": "150",
+              "formula": "H6*I6"
+            },
+            {
+              "addr": "K6",
+              "type": "FORMULA",
+              "value": "200",
+              "formula": "J6+I6"
+            },
+            {
+              "addr": "L6",
+              "type": "FORMULA",
+              "value": "-4750",
+              "formula": "IFERROR(C6-(J6*D6)-(K6*G6),0)"
+            },
+            {
+              "addr": "M6",
+              "type": "NUMBER",
+              "value": "520"
+            },
+            {
+              "addr": "N6",
+              "type": "FORMULA",
+              "value": "150",
+              "formula": "J6"
+            },
+            {
+              "addr": "O6",
+              "type": "FORMULA",
+              "value": "0.288461538461538",
+              "formula": "IFERROR(J6/M6,0)"
+            },
+            {
+              "addr": "P6",
+              "type": "FORMULA",
+              "value": "\ud83d\udd34 CUTOFF RISK",
+              "formula": "IF(O6>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O6>=0.7,\"\ud83d\udd36 PROMISING\",IF(O6>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O6>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))"
+            }
+          ]
+        },
+        {
+          "r": 7,
+          "cells": [
+            {
+              "addr": "A7",
+              "type": "STRING",
+              "value": "PKG-004"
+            },
+            {
+              "addr": "B7",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C7",
+              "type": "NUMBER",
+              "value": "200"
+            },
+            {
+              "addr": "D7",
+              "type": "NUMBER",
+              "value": "5"
+            },
+            {
+              "addr": "E7",
+              "type": "NUMBER",
+              "value": "3"
+            },
+            {
+              "addr": "F7",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "G7",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "H7",
+              "type": "NUMBER",
+              "value": "1.8"
+            },
+            {
+              "addr": "I7",
+              "type": "NUMBER",
+              "value": "20"
+            },
+            {
+              "addr": "J7",
+              "type": "FORMULA",
+              "value": "36",
+              "formula": "H7*I7"
+            },
+            {
+              "addr": "K7",
+              "type": "FORMULA",
+              "value": "56",
+              "formula": "J7+I7"
+            },
+            {
+              "addr": "L7",
+              "type": "FORMULA",
+              "value": "-92",
+              "formula": "IFERROR(C7-(J7*D7)-(K7*G7),0)"
+            },
+            {
+              "addr": "M7",
+              "type": "NUMBER",
+              "value": "180"
+            },
+            {
+              "addr": "N7",
+              "type": "FORMULA",
+              "value": "36",
+              "formula": "J7"
+            },
+            {
+              "addr": "O7",
+              "type": "FORMULA",
+              "value": "0.2",
+              "formula": "IFERROR(J7/M7,0)"
+            },
+            {
+              "addr": "P7",
+              "type": "FORMULA",
+              "value": "\ud83d\udd34 CUTOFF RISK",
+              "formula": "IF(O7>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O7>=0.7,\"\ud83d\udd36 PROMISING\",IF(O7>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O7>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))"
+            }
+          ]
+        },
+        {
+          "r": 8,
+          "cells": [
+            {
+              "addr": "A8",
+              "type": "STRING",
+              "value": "PKG-005"
+            },
+            {
+              "addr": "B8",
+              "type": "STRING",
+              "value": "C-1602-O-1B"
+            },
+            {
+              "addr": "C8",
+              "type": "NUMBER",
+              "value": "400"
+            },
+            {
+              "addr": "D8",
+              "type": "NUMBER",
+              "value": "15"
+            },
+            {
+              "addr": "E8",
+              "type": "NUMBER",
+              "value": "12"
+            },
+            {
+              "addr": "F8",
+              "type": "NUMBER",
+              "value": "8"
+            },
+            {
+              "addr": "G8",
+              "type": "NUMBER",
+              "value": "4"
+            },
+            {
+              "addr": "H8",
+              "type": "NUMBER",
+              "value": "2.2"
+            },
+            {
+              "addr": "I8",
+              "type": "NUMBER",
+              "value": "35"
+            },
+            {
+              "addr": "J8",
+              "type": "FORMULA",
+              "value": "77",
+              "formula": "H8*I8"
+            },
+            {
+              "addr": "K8",
+              "type": "FORMULA",
+              "value": "112",
+              "formula": "J8+I8"
+            },
+            {
+              "addr": "L8",
+              "type": "FORMULA",
+              "value": "-1203",
+              "formula": "IFERROR(C8-(J8*D8)-(K8*G8),0)"
+            },
+            {
+              "addr": "M8",
+              "type": "NUMBER",
+              "value": "360"
+            },
+            {
+              "addr": "N8",
+              "type": "FORMULA",
+              "value": "77",
+              "formula": "J8"
+            },
+            {
+              "addr": "O8",
+              "type": "FORMULA",
+              "value": "0.213888888888889",
+              "formula": "IFERROR(J8/M8,0)"
+            },
+            {
+              "addr": "P8",
+              "type": "FORMULA",
+              "value": "\ud83d\udd34 CUTOFF RISK",
+              "formula": "IF(O8>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O8>=0.7,\"\ud83d\udd36 PROMISING\",IF(O8>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O8>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ISO DRAWING LOG",
+      "row_count": 12,
+      "cell_count": 192,
+      "string_refs": 29,
+      "rows": [
+        {
+          "r": 1,
+          "cells": [
+            {
+              "addr": "A1",
+              "type": "STRING",
+              "value": "SAGCO-NOTEBOOK-001 | SHEET 6 \u2014 ISO DRAWING LOG  |  Page-by-Page Field Entry"
+            },
+            {
+              "addr": "B1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P1",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 2,
+          "cells": [
+            {
+              "addr": "A2",
+              "type": "STRING",
+              "value": "PAGE #"
+            },
+            {
+              "addr": "B2",
+              "type": "STRING",
+              "value": "DRAWING #"
+            },
+            {
+              "addr": "C2",
+              "type": "STRING",
+              "value": "CIRCUIT"
+            },
+            {
+              "addr": "D2",
+              "type": "STRING",
+              "value": "LINE #"
+            },
+            {
+              "addr": "E2",
+              "type": "STRING",
+              "value": "PROCESS"
+            },
+            {
+              "addr": "F2",
+              "type": "STRING",
+              "value": "MATERIAL"
+            },
+            {
+              "addr": "G2",
+              "type": "STRING",
+              "value": "INSULATED?"
+            },
+            {
+              "addr": "H2",
+              "type": "STRING",
+              "value": "APPROX FT"
+            },
+            {
+              "addr": "I2",
+              "type": "STRING",
+              "value": "OPER PRESS"
+            },
+            {
+              "addr": "J2",
+              "type": "STRING",
+              "value": "OPER TEMP"
+            },
+            {
+              "addr": "K2",
+              "type": "STRING",
+              "value": "TASK"
+            },
+            {
+              "addr": "L2",
+              "type": "STRING",
+              "value": "POINT A"
+            },
+            {
+              "addr": "M2",
+              "type": "STRING",
+              "value": "POINT B"
+            },
+            {
+              "addr": "N2",
+              "type": "STRING",
+              "value": "ELBOW CT"
+            },
+            {
+              "addr": "O2",
+              "type": "STRING",
+              "value": "TEE CT"
+            },
+            {
+              "addr": "P2",
+              "type": "STRING",
+              "value": "VALVE CT"
+            }
+          ]
+        },
+        {
+          "r": 3,
+          "cells": [
+            {
+              "addr": "A3",
+              "type": "STRING",
+              "value": "20 OF 26"
+            },
+            {
+              "addr": "B3",
+              "type": "STRING",
+              "value": "ISO-20"
+            },
+            {
+              "addr": "C3",
+              "type": "STRING",
+              "value": "PO-HDRFE-1B"
+            },
+            {
+              "addr": "D3",
+              "type": "STRING",
+              "value": "2\"-PO-162570E-B1B"
+            },
+            {
+              "addr": "E3",
+              "type": "STRING",
+              "value": "PAN OIL"
+            },
+            {
+              "addr": "F3",
+              "type": "STRING",
+              "value": "B1B-API 5L GrB"
+            },
+            {
+              "addr": "G3",
+              "type": "STRING",
+              "value": "YES"
+            },
+            {
+              "addr": "H3",
+              "type": "NUMBER",
+              "value": "2470"
+            },
+            {
+              "addr": "I3",
+              "type": "STRING",
+              "value": "200 PSI"
+            },
+            {
+              "addr": "J3",
+              "type": "STRING",
+              "value": "100\u00b0F"
+            },
+            {
+              "addr": "K3",
+              "type": "STRING",
+              "value": "REMOVE INSULATION"
+            },
+            {
+              "addr": "L3",
+              "type": "STRING",
+              "value": "HEADER"
+            },
+            {
+              "addr": "M3",
+              "type": "STRING",
+              "value": "FURNACE INLET"
+            },
+            {
+              "addr": "N3",
+              "type": "NUMBER",
+              "value": "4"
+            },
+            {
+              "addr": "O3",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "P3",
+              "type": "NUMBER",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "r": 4,
+          "cells": [
+            {
+              "addr": "A4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O4",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P4",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 5,
+          "cells": [
+            {
+              "addr": "A5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O5",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P5",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 6,
+          "cells": [
+            {
+              "addr": "A6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O6",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P6",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 7,
+          "cells": [
+            {
+              "addr": "A7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O7",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P7",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 8,
+          "cells": [
+            {
+              "addr": "A8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O8",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P8",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 9,
+          "cells": [
+            {
+              "addr": "A9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O9",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P9",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 10,
+          "cells": [
+            {
+              "addr": "A10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O10",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P10",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 11,
+          "cells": [
+            {
+              "addr": "A11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P11",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 12,
+          "cells": [
+            {
+              "addr": "A12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "B12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "M12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "N12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "O12",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "P12",
+              "type": "EMPTY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "PAGE ENTRY ENGINE",
+      "row_count": 10,
+      "cell_count": 120,
+      "string_refs": 21,
+      "rows": [
+        {
+          "r": 1,
+          "cells": [
+            {
+              "addr": "A1",
+              "type": "STRING",
+              "value": "SAGCO-NOTEBOOK-001 | SHEET 7 \u2014 PAGE ENTRY ENGINE  |  Run Ft \u2192 LNFT \u2192 SQFT \u2192 MH \u2192 VERDICT"
+            },
+            {
+              "addr": "B1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K1",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L1",
+              "type": "EMPTY"
+            }
+          ]
+        },
+        {
+          "r": 2,
+          "cells": [
+            {
+              "addr": "A2",
+              "type": "STRING",
+              "value": "PAGE"
+            },
+            {
+              "addr": "B2",
+              "type": "STRING",
+              "value": "ANGLE \u00b0"
+            },
+            {
+              "addr": "C2",
+              "type": "STRING",
+              "value": "RUN FT"
+            },
+            {
+              "addr": "D2",
+              "type": "STRING",
+              "value": "DIA (IN)"
+            },
+            {
+              "addr": "E2",
+              "type": "STRING",
+              "value": "ELBOWS"
+            },
+            {
+              "addr": "F2",
+              "type": "STRING",
+              "value": "TEES"
+            },
+            {
+              "addr": "G2",
+              "type": "STRING",
+              "value": "VALVES"
+            },
+            {
+              "addr": "H2",
+              "type": "STRING",
+              "value": "BASE LNFT"
+            },
+            {
+              "addr": "I2",
+              "type": "STRING",
+              "value": "ADJ LNFT"
+            },
+            {
+              "addr": "J2",
+              "type": "STRING",
+              "value": "SQFT"
+            },
+            {
+              "addr": "K2",
+              "type": "STRING",
+              "value": "MAN HRS"
+            },
+            {
+              "addr": "L2",
+              "type": "STRING",
+              "value": "VERDICT"
+            }
+          ]
+        },
+        {
+          "r": 3,
+          "cells": [
+            {
+              "addr": "A3",
+              "type": "STRING",
+              "value": "20 OF 26"
+            },
+            {
+              "addr": "B3",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C3",
+              "type": "NUMBER",
+              "value": "2470"
+            },
+            {
+              "addr": "D3",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "E3",
+              "type": "NUMBER",
+              "value": "4"
+            },
+            {
+              "addr": "F3",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "G3",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "H3",
+              "type": "FORMULA",
+              "value": "2470",
+              "formula": "C3"
+            },
+            {
+              "addr": "I3",
+              "type": "FORMULA",
+              "value": "2476",
+              "formula": "H3+(E3*1.5)+(F3*2)+(G3*3)"
+            },
+            {
+              "addr": "J3",
+              "type": "FORMULA",
+              "value": "1296.43056838139",
+              "formula": "IFERROR(PI()*(D3/12)*I3,0)"
+            },
+            {
+              "addr": "K3",
+              "type": "FORMULA",
+              "value": "165.066666666667",
+              "formula": "IFERROR(I3/15,0)"
+            },
+            {
+              "addr": "L3",
+              "type": "FORMULA",
+              "value": "\u2705 PASS",
+              "formula": "IF(C3=0,\"\u23f3 ENTER DATA\",IF(I3>=C3*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))"
+            }
+          ]
+        },
+        {
+          "r": 4,
+          "cells": [
+            {
+              "addr": "A4",
+              "type": "STRING",
+              "value": "21 OF 26"
+            },
+            {
+              "addr": "B4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D4",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "E4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "G4",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "H4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "C4"
+            },
+            {
+              "addr": "I4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "H4+(E4*1.5)+(F4*2)+(G4*3)"
+            },
+            {
+              "addr": "J4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(PI()*(D4/12)*I4,0)"
+            },
+            {
+              "addr": "K4",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(I4/15,0)"
+            },
+            {
+              "addr": "L4",
+              "type": "FORMULA",
+              "value": "\u23f3 ENTER DATA",
+              "formula": "IF(C4=0,\"\u23f3 ENTER DATA\",IF(I4>=C4*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))"
+            }
+          ]
+        },
+        {
+          "r": 5,
+          "cells": [
+            {
+              "addr": "A5",
+              "type": "STRING",
+              "value": "22 OF 26"
+            },
+            {
+              "addr": "B5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D5",
+              "type": "NUMBER",
+              "value": "2"
+            },
+            {
+              "addr": "E5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "G5",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "H5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "C5"
+            },
+            {
+              "addr": "I5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "H5+(E5*1.5)+(F5*2)+(G5*3)"
+            },
+            {
+              "addr": "J5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(PI()*(D5/12)*I5,0)"
+            },
+            {
+              "addr": "K5",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(I5/15,0)"
+            },
+            {
+              "addr": "L5",
+              "type": "FORMULA",
+              "value": "\u23f3 ENTER DATA",
+              "formula": "IF(C5=0,\"\u23f3 ENTER DATA\",IF(I5>=C5*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))"
+            }
+          ]
+        },
+        {
+          "r": 6,
+          "cells": [
+            {
+              "addr": "A6",
+              "type": "STRING",
+              "value": "23 OF 26"
+            },
+            {
+              "addr": "B6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D6",
+              "type": "NUMBER",
+              "value": "4"
+            },
+            {
+              "addr": "E6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "G6",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "H6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "C6"
+            },
+            {
+              "addr": "I6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "H6+(E6*1.5)+(F6*2)+(G6*3)"
+            },
+            {
+              "addr": "J6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(PI()*(D6/12)*I6,0)"
+            },
+            {
+              "addr": "K6",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(I6/15,0)"
+            },
+            {
+              "addr": "L6",
+              "type": "FORMULA",
+              "value": "\u23f3 ENTER DATA",
+              "formula": "IF(C6=0,\"\u23f3 ENTER DATA\",IF(I6>=C6*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))"
+            }
+          ]
+        },
+        {
+          "r": 7,
+          "cells": [
+            {
+              "addr": "A7",
+              "type": "STRING",
+              "value": "24 OF 26"
+            },
+            {
+              "addr": "B7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D7",
+              "type": "NUMBER",
+              "value": "4"
+            },
+            {
+              "addr": "E7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "G7",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "H7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "C7"
+            },
+            {
+              "addr": "I7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "H7+(E7*1.5)+(F7*2)+(G7*3)"
+            },
+            {
+              "addr": "J7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(PI()*(D7/12)*I7,0)"
+            },
+            {
+              "addr": "K7",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(I7/15,0)"
+            },
+            {
+              "addr": "L7",
+              "type": "FORMULA",
+              "value": "\u23f3 ENTER DATA",
+              "formula": "IF(C7=0,\"\u23f3 ENTER DATA\",IF(I7>=C7*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))"
+            }
+          ]
+        },
+        {
+          "r": 8,
+          "cells": [
+            {
+              "addr": "A8",
+              "type": "STRING",
+              "value": "25 OF 26"
+            },
+            {
+              "addr": "B8",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C8",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D8",
+              "type": "NUMBER",
+              "value": "6"
+            },
+            {
+              "addr": "E8",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F8",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "G8",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "H8",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "C8"
+            },
+            {
+              "addr": "I8",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "H8+(E8*1.5)+(F8*2)+(G8*3)"
+            },
+            {
+              "addr": "J8",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(PI()*(D8/12)*I8,0)"
+            },
+            {
+              "addr": "K8",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(I8/15,0)"
+            },
+            {
+              "addr": "L8",
+              "type": "FORMULA",
+              "value": "\u23f3 ENTER DATA",
+              "formula": "IF(C8=0,\"\u23f3 ENTER DATA\",IF(I8>=C8*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))"
+            }
+          ]
+        },
+        {
+          "r": 9,
+          "cells": [
+            {
+              "addr": "A9",
+              "type": "STRING",
+              "value": "26 OF 26"
+            },
+            {
+              "addr": "B9",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "C9",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "D9",
+              "type": "NUMBER",
+              "value": "6"
+            },
+            {
+              "addr": "E9",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "F9",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "G9",
+              "type": "NUMBER",
+              "value": "0"
+            },
+            {
+              "addr": "H9",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "C9"
+            },
+            {
+              "addr": "I9",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "H9+(E9*1.5)+(F9*2)+(G9*3)"
+            },
+            {
+              "addr": "J9",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(PI()*(D9/12)*I9,0)"
+            },
+            {
+              "addr": "K9",
+              "type": "FORMULA",
+              "value": "0",
+              "formula": "IFERROR(I9/15,0)"
+            },
+            {
+              "addr": "L9",
+              "type": "FORMULA",
+              "value": "\u23f3 ENTER DATA",
+              "formula": "IF(C9=0,\"\u23f3 ENTER DATA\",IF(I9>=C9*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))"
+            }
+          ]
+        },
+        {
+          "r": 11,
+          "cells": [
+            {
+              "addr": "A11",
+              "type": "STRING",
+              "value": "\u2699\ufe0f  MAN HRS formula uses 15 LNFT/hr baseline \u2014 adjust in col K formula per crew rate | SQFT = \u03c0 \u00d7 (Dia\u2033/12) \u00d7 Adj-LNFT | Elbow adder = 1.5 LNFT each | Tee = 2.0 | Valve = 3.0"
+            },
+            {
+              "addr": "B11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "C11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "D11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "E11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "F11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "G11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "H11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "I11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "J11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "K11",
+              "type": "EMPTY"
+            },
+            {
+              "addr": "L11",
+              "type": "EMPTY"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "formulas": [
+    {
+      "sheet": "FIELD DATA",
+      "addr": "F3",
+      "expr": "D3*12",
+      "value": "1440"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "G3",
+      "expr": "E3*144",
+      "value": "36080.64"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "J3",
+      "expr": "H3*I3*10",
+      "value": "120"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "L3",
+      "expr": "IFERROR(K3/J3,\"\u2014\")",
+      "value": "4"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "M3",
+      "expr": "IFERROR(D3/J3,\"\u2014\")",
+      "value": "1"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "N3",
+      "expr": "IFERROR(E3/J3,\"\u2014\")",
+      "value": "2.088"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "O3",
+      "expr": "IFERROR(E3/D3,\"\u2014\")",
+      "value": "2.088"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "F4",
+      "expr": "D4*12",
+      "value": "1140"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "G4",
+      "expr": "E4*144",
+      "value": "28569.6"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "J4",
+      "expr": "H4*I4*10",
+      "value": "60"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "L4",
+      "expr": "IFERROR(K4/J4,\"\u2014\")",
+      "value": "5.33333333333333"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "M4",
+      "expr": "IFERROR(D4/J4,\"\u2014\")",
+      "value": "1.58333333333333"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "N4",
+      "expr": "IFERROR(E4/J4,\"\u2014\")",
+      "value": "3.30666666666667"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "O4",
+      "expr": "IFERROR(E4/D4,\"\u2014\")",
+      "value": "2.08842105263158"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "F5",
+      "expr": "D5*12",
+      "value": "1680"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "G5",
+      "expr": "E5*144",
+      "value": "42094.08"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "J5",
+      "expr": "H5*I5*10",
+      "value": "150"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "L5",
+      "expr": "IFERROR(K5/J5,\"\u2014\")",
+      "value": "3.73333333333333"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "M5",
+      "expr": "IFERROR(D5/J5,\"\u2014\")",
+      "value": "0.933333333333333"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "N5",
+      "expr": "IFERROR(E5/J5,\"\u2014\")",
+      "value": "1.9488"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "O5",
+      "expr": "IFERROR(E5/D5,\"\u2014\")",
+      "value": "2.088"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "F6",
+      "expr": "D6*12",
+      "value": "960"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "G6",
+      "expr": "E6*144",
+      "value": "24053.76"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "J6",
+      "expr": "H6*I6*10",
+      "value": "40"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "L6",
+      "expr": "IFERROR(K6/J6,\"\u2014\")",
+      "value": "5.375"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "M6",
+      "expr": "IFERROR(D6/J6,\"\u2014\")",
+      "value": "2"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "N6",
+      "expr": "IFERROR(E6/J6,\"\u2014\")",
+      "value": "4.176"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "O6",
+      "expr": "IFERROR(E6/D6,\"\u2014\")",
+      "value": "2.088"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "F7",
+      "expr": "D7*12",
+      "value": "1320"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "G7",
+      "expr": "E7*144",
+      "value": "33073.92"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "J7",
+      "expr": "H7*I7*10",
+      "value": "120"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "L7",
+      "expr": "IFERROR(K7/J7,\"\u2014\")",
+      "value": "3.41666666666667"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "M7",
+      "expr": "IFERROR(D7/J7,\"\u2014\")",
+      "value": "0.916666666666667"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "N7",
+      "expr": "IFERROR(E7/J7,\"\u2014\")",
+      "value": "1.914"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "O7",
+      "expr": "IFERROR(E7/D7,\"\u2014\")",
+      "value": "2.088"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "D8",
+      "expr": "SUM(D3:D7)",
+      "value": "545"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "E8",
+      "expr": "SUM(E3:E7)",
+      "value": "1138"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "J8",
+      "expr": "SUM(J3:J7)",
+      "value": "490"
+    },
+    {
+      "sheet": "FIELD DATA",
+      "addr": "K8",
+      "expr": "SUM(K3:K7)",
+      "value": "1985"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "C3",
+      "expr": "INT(A3)",
+      "value": "17"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "D3",
+      "expr": "INT((A3-INT(A3))*60)",
+      "value": "15"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "E3",
+      "expr": "ROUND((((A3-INT(A3))*60)-INT((A3-INT(A3))*60))*60,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "F3",
+      "expr": "C3&\"\u00b0 \"&D3&\"' \"&E3&\"\"",
+      "value": "17\u00b0 15' 0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "H3",
+      "expr": "IF(A3>0,\"VALID\",\"CHECK\")",
+      "value": "VALID"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "C4",
+      "expr": "INT(A4)",
+      "value": "28"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "D4",
+      "expr": "INT((A4-INT(A4))*60)",
+      "value": "30"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "E4",
+      "expr": "ROUND((((A4-INT(A4))*60)-INT((A4-INT(A4))*60))*60,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "F4",
+      "expr": "C4&\"\u00b0 \"&D4&\"' \"&E4&\"\"",
+      "value": "28\u00b0 30' 0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "H4",
+      "expr": "IF(A4>0,\"VALID\",\"CHECK\")",
+      "value": "VALID"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "C5",
+      "expr": "INT(A5)",
+      "value": "45"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "D5",
+      "expr": "INT((A5-INT(A5))*60)",
+      "value": "0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "E5",
+      "expr": "ROUND((((A5-INT(A5))*60)-INT((A5-INT(A5))*60))*60,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "F5",
+      "expr": "C5&\"\u00b0 \"&D5&\"' \"&E5&\"\"",
+      "value": "45\u00b0 0' 0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "H5",
+      "expr": "IF(A5>0,\"VALID\",\"CHECK\")",
+      "value": "VALID"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "C6",
+      "expr": "INT(A6)",
+      "value": "62"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "D6",
+      "expr": "INT((A6-INT(A6))*60)",
+      "value": "45"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "E6",
+      "expr": "ROUND((((A6-INT(A6))*60)-INT((A6-INT(A6))*60))*60,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "F6",
+      "expr": "C6&\"\u00b0 \"&D6&\"' \"&E6&\"\"",
+      "value": "62\u00b0 45' 0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "H6",
+      "expr": "IF(A6>0,\"VALID\",\"CHECK\")",
+      "value": "VALID"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "C7",
+      "expr": "INT(A7)",
+      "value": "89"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "D7",
+      "expr": "INT((A7-INT(A7))*60)",
+      "value": "54"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "E7",
+      "expr": "ROUND((((A7-INT(A7))*60)-INT((A7-INT(A7))*60))*60,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "F7",
+      "expr": "C7&\"\u00b0 \"&D7&\"' \"&E7&\"\"",
+      "value": "89\u00b0 54' 0"
+    },
+    {
+      "sheet": "DMS ENGINE",
+      "addr": "H7",
+      "expr": "IF(A7>0,\"VALID\",\"CHECK\")",
+      "value": "VALID"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "E3",
+      "expr": "B3+(C3/60)+(D3/3600)",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "F3",
+      "expr": "SIN(RADIANS(E3))",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "G3",
+      "expr": "COS(RADIANS(E3))",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "H3",
+      "expr": "F3",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "I3",
+      "expr": "G3",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "J3",
+      "expr": "TEXT(H3,\"0.000000\")&\"N  \"&TEXT(I3,\"0.000000\")&\"E\"",
+      "value": "0.000000N  1.000000E"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "E4",
+      "expr": "B4+(C4/60)+(D4/3600)",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "F4",
+      "expr": "SIN(RADIANS(E4))",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "G4",
+      "expr": "COS(RADIANS(E4))",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "H4",
+      "expr": "F4",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "I4",
+      "expr": "G4",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "J4",
+      "expr": "TEXT(H4,\"0.000000\")&\"N  \"&TEXT(I4,\"0.000000\")&\"E\"",
+      "value": "0.000000N  1.000000E"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "E5",
+      "expr": "B5+(C5/60)+(D5/3600)",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "F5",
+      "expr": "SIN(RADIANS(E5))",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "G5",
+      "expr": "COS(RADIANS(E5))",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "H5",
+      "expr": "F5",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "I5",
+      "expr": "G5",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "J5",
+      "expr": "TEXT(H5,\"0.000000\")&\"N  \"&TEXT(I5,\"0.000000\")&\"E\"",
+      "value": "0.000000N  1.000000E"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "E6",
+      "expr": "B6+(C6/60)+(D6/3600)",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "F6",
+      "expr": "SIN(RADIANS(E6))",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "G6",
+      "expr": "COS(RADIANS(E6))",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "H6",
+      "expr": "F6",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "I6",
+      "expr": "G6",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "J6",
+      "expr": "TEXT(H6,\"0.000000\")&\"N  \"&TEXT(I6,\"0.000000\")&\"E\"",
+      "value": "0.000000N  1.000000E"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "E7",
+      "expr": "B7+(C7/60)+(D7/3600)",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "F7",
+      "expr": "SIN(RADIANS(E7))",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "G7",
+      "expr": "COS(RADIANS(E7))",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "H7",
+      "expr": "F7",
+      "value": "0"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "I7",
+      "expr": "G7",
+      "value": "1"
+    },
+    {
+      "sheet": "SIN COS PROJECTION",
+      "addr": "J7",
+      "expr": "TEXT(H7,\"0.000000\")&\"N  \"&TEXT(I7,\"0.000000\")&\"E\"",
+      "value": "0.000000N  1.000000E"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "F3",
+      "expr": "E3-D3",
+      "value": "-100"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "G3",
+      "expr": "IFERROR((E3/D3)*100,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "H3",
+      "expr": "IF(G3>=90,\"\u2705 PROVEN\",IF(G3>=70,\"\ud83d\udd36 PROMISING\",IF(G3>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))",
+      "value": "\u274c UNPROVEN"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "I3",
+      "expr": "IF(F3<-10,\"UNDER-BIAS\",IF(F3>10,\"OVER-BIAS\",\"NEUTRAL\"))",
+      "value": "UNDER-BIAS"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "J3",
+      "expr": "IFERROR(MAX(0,100-ABS(F3/D3*100)),0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "K3",
+      "expr": "IF(ABS(F3)<=5,\"TIGHT\",IF(ABS(F3)<=15,\"MODERATE\",\"WIDE\"))",
+      "value": "WIDE"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "F4",
+      "expr": "E4-D4",
+      "value": "-100"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "G4",
+      "expr": "IFERROR((E4/D4)*100,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "H4",
+      "expr": "IF(G4>=90,\"\u2705 PROVEN\",IF(G4>=70,\"\ud83d\udd36 PROMISING\",IF(G4>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))",
+      "value": "\u274c UNPROVEN"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "I4",
+      "expr": "IF(F4<-10,\"UNDER-BIAS\",IF(F4>10,\"OVER-BIAS\",\"NEUTRAL\"))",
+      "value": "UNDER-BIAS"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "J4",
+      "expr": "IFERROR(MAX(0,100-ABS(F4/D4*100)),0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "K4",
+      "expr": "IF(ABS(F4)<=5,\"TIGHT\",IF(ABS(F4)<=15,\"MODERATE\",\"WIDE\"))",
+      "value": "WIDE"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "F5",
+      "expr": "E5-D5",
+      "value": "-100"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "G5",
+      "expr": "IFERROR((E5/D5)*100,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "H5",
+      "expr": "IF(G5>=90,\"\u2705 PROVEN\",IF(G5>=70,\"\ud83d\udd36 PROMISING\",IF(G5>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))",
+      "value": "\u274c UNPROVEN"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "I5",
+      "expr": "IF(F5<-10,\"UNDER-BIAS\",IF(F5>10,\"OVER-BIAS\",\"NEUTRAL\"))",
+      "value": "UNDER-BIAS"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "J5",
+      "expr": "IFERROR(MAX(0,100-ABS(F5/D5*100)),0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "K5",
+      "expr": "IF(ABS(F5)<=5,\"TIGHT\",IF(ABS(F5)<=15,\"MODERATE\",\"WIDE\"))",
+      "value": "WIDE"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "F6",
+      "expr": "E6-D6",
+      "value": "-100"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "G6",
+      "expr": "IFERROR((E6/D6)*100,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "H6",
+      "expr": "IF(G6>=90,\"\u2705 PROVEN\",IF(G6>=70,\"\ud83d\udd36 PROMISING\",IF(G6>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))",
+      "value": "\u274c UNPROVEN"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "I6",
+      "expr": "IF(F6<-10,\"UNDER-BIAS\",IF(F6>10,\"OVER-BIAS\",\"NEUTRAL\"))",
+      "value": "UNDER-BIAS"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "J6",
+      "expr": "IFERROR(MAX(0,100-ABS(F6/D6*100)),0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "K6",
+      "expr": "IF(ABS(F6)<=5,\"TIGHT\",IF(ABS(F6)<=15,\"MODERATE\",\"WIDE\"))",
+      "value": "WIDE"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "F7",
+      "expr": "E7-D7",
+      "value": "-100"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "G7",
+      "expr": "IFERROR((E7/D7)*100,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "H7",
+      "expr": "IF(G7>=90,\"\u2705 PROVEN\",IF(G7>=70,\"\ud83d\udd36 PROMISING\",IF(G7>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))",
+      "value": "\u274c UNPROVEN"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "I7",
+      "expr": "IF(F7<-10,\"UNDER-BIAS\",IF(F7>10,\"OVER-BIAS\",\"NEUTRAL\"))",
+      "value": "UNDER-BIAS"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "J7",
+      "expr": "IFERROR(MAX(0,100-ABS(F7/D7*100)),0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "K7",
+      "expr": "IF(ABS(F7)<=5,\"TIGHT\",IF(ABS(F7)<=15,\"MODERATE\",\"WIDE\"))",
+      "value": "WIDE"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "F8",
+      "expr": "E8-D8",
+      "value": "-100"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "G8",
+      "expr": "IFERROR((E8/D8)*100,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "H8",
+      "expr": "IF(G8>=90,\"\u2705 PROVEN\",IF(G8>=70,\"\ud83d\udd36 PROMISING\",IF(G8>=50,\"\u26a0\ufe0f PARTIAL\",\"\u274c UNPROVEN\")))",
+      "value": "\u274c UNPROVEN"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "I8",
+      "expr": "IF(F8<-10,\"UNDER-BIAS\",IF(F8>10,\"OVER-BIAS\",\"NEUTRAL\"))",
+      "value": "UNDER-BIAS"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "J8",
+      "expr": "IFERROR(MAX(0,100-ABS(F8/D8*100)),0)",
+      "value": "0"
+    },
+    {
+      "sheet": "VERDICT ENGINE",
+      "addr": "K8",
+      "expr": "IF(ABS(F8)<=5,\"TIGHT\",IF(ABS(F8)<=15,\"MODERATE\",\"WIDE\"))",
+      "value": "WIDE"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "J4",
+      "expr": "H4*I4",
+      "value": "100"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "K4",
+      "expr": "J4+I4",
+      "value": "140"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "L4",
+      "expr": "IFERROR(C4-(J4*D4)-(K4*G4),0)",
+      "value": "-2220"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "N4",
+      "expr": "J4",
+      "value": "100"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "O4",
+      "expr": "IFERROR(J4/M4,0)",
+      "value": "0.25"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "P4",
+      "expr": "IF(O4>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O4>=0.7,\"\ud83d\udd36 PROMISING\",IF(O4>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O4>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))",
+      "value": "\ud83d\udd34 CUTOFF RISK"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "J5",
+      "expr": "H5*I5",
+      "value": "60"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "K5",
+      "expr": "J5+I5",
+      "value": "90"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "L5",
+      "expr": "IFERROR(C5-(J5*D5)-(K5*G5),0)",
+      "value": "-570"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "N5",
+      "expr": "J5",
+      "value": "60"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "O5",
+      "expr": "IFERROR(J5/M5,0)",
+      "value": "0.214285714285714"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "P5",
+      "expr": "IF(O5>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O5>=0.7,\"\ud83d\udd36 PROMISING\",IF(O5>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O5>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))",
+      "value": "\ud83d\udd34 CUTOFF RISK"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "J6",
+      "expr": "H6*I6",
+      "value": "150"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "K6",
+      "expr": "J6+I6",
+      "value": "200"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "L6",
+      "expr": "IFERROR(C6-(J6*D6)-(K6*G6),0)",
+      "value": "-4750"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "N6",
+      "expr": "J6",
+      "value": "150"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "O6",
+      "expr": "IFERROR(J6/M6,0)",
+      "value": "0.288461538461538"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "P6",
+      "expr": "IF(O6>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O6>=0.7,\"\ud83d\udd36 PROMISING\",IF(O6>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O6>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))",
+      "value": "\ud83d\udd34 CUTOFF RISK"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "J7",
+      "expr": "H7*I7",
+      "value": "36"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "K7",
+      "expr": "J7+I7",
+      "value": "56"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "L7",
+      "expr": "IFERROR(C7-(J7*D7)-(K7*G7),0)",
+      "value": "-92"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "N7",
+      "expr": "J7",
+      "value": "36"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "O7",
+      "expr": "IFERROR(J7/M7,0)",
+      "value": "0.2"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "P7",
+      "expr": "IF(O7>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O7>=0.7,\"\ud83d\udd36 PROMISING\",IF(O7>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O7>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))",
+      "value": "\ud83d\udd34 CUTOFF RISK"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "J8",
+      "expr": "H8*I8",
+      "value": "77"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "K8",
+      "expr": "J8+I8",
+      "value": "112"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "L8",
+      "expr": "IFERROR(C8-(J8*D8)-(K8*G8),0)",
+      "value": "-1203"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "N8",
+      "expr": "J8",
+      "value": "77"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "O8",
+      "expr": "IFERROR(J8/M8,0)",
+      "value": "0.213888888888889"
+    },
+    {
+      "sheet": "BIAS Q-POINT ENGINE",
+      "addr": "P8",
+      "expr": "IF(O8>=0.9,\"\ud83d\udfe2 ACTIVE\",IF(O8>=0.7,\"\ud83d\udd36 PROMISING\",IF(O8>=0.5,\"\u26a0\ufe0f PARTIAL\",IF(O8>0,\"\ud83d\udd34 CUTOFF RISK\",\"\u26d4 CUTOFF\"))))",
+      "value": "\ud83d\udd34 CUTOFF RISK"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "H3",
+      "expr": "C3",
+      "value": "2470"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "I3",
+      "expr": "H3+(E3*1.5)+(F3*2)+(G3*3)",
+      "value": "2476"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "J3",
+      "expr": "IFERROR(PI()*(D3/12)*I3,0)",
+      "value": "1296.43056838139"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "K3",
+      "expr": "IFERROR(I3/15,0)",
+      "value": "165.066666666667"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "L3",
+      "expr": "IF(C3=0,\"\u23f3 ENTER DATA\",IF(I3>=C3*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))",
+      "value": "\u2705 PASS"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "H4",
+      "expr": "C4",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "I4",
+      "expr": "H4+(E4*1.5)+(F4*2)+(G4*3)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "J4",
+      "expr": "IFERROR(PI()*(D4/12)*I4,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "K4",
+      "expr": "IFERROR(I4/15,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "L4",
+      "expr": "IF(C4=0,\"\u23f3 ENTER DATA\",IF(I4>=C4*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))",
+      "value": "\u23f3 ENTER DATA"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "H5",
+      "expr": "C5",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "I5",
+      "expr": "H5+(E5*1.5)+(F5*2)+(G5*3)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "J5",
+      "expr": "IFERROR(PI()*(D5/12)*I5,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "K5",
+      "expr": "IFERROR(I5/15,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "L5",
+      "expr": "IF(C5=0,\"\u23f3 ENTER DATA\",IF(I5>=C5*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))",
+      "value": "\u23f3 ENTER DATA"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "H6",
+      "expr": "C6",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "I6",
+      "expr": "H6+(E6*1.5)+(F6*2)+(G6*3)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "J6",
+      "expr": "IFERROR(PI()*(D6/12)*I6,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "K6",
+      "expr": "IFERROR(I6/15,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "L6",
+      "expr": "IF(C6=0,\"\u23f3 ENTER DATA\",IF(I6>=C6*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))",
+      "value": "\u23f3 ENTER DATA"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "H7",
+      "expr": "C7",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "I7",
+      "expr": "H7+(E7*1.5)+(F7*2)+(G7*3)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "J7",
+      "expr": "IFERROR(PI()*(D7/12)*I7,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "K7",
+      "expr": "IFERROR(I7/15,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "L7",
+      "expr": "IF(C7=0,\"\u23f3 ENTER DATA\",IF(I7>=C7*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))",
+      "value": "\u23f3 ENTER DATA"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "H8",
+      "expr": "C8",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "I8",
+      "expr": "H8+(E8*1.5)+(F8*2)+(G8*3)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "J8",
+      "expr": "IFERROR(PI()*(D8/12)*I8,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "K8",
+      "expr": "IFERROR(I8/15,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "L8",
+      "expr": "IF(C8=0,\"\u23f3 ENTER DATA\",IF(I8>=C8*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))",
+      "value": "\u23f3 ENTER DATA"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "H9",
+      "expr": "C9",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "I9",
+      "expr": "H9+(E9*1.5)+(F9*2)+(G9*3)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "J9",
+      "expr": "IFERROR(PI()*(D9/12)*I9,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "K9",
+      "expr": "IFERROR(I9/15,0)",
+      "value": "0"
+    },
+    {
+      "sheet": "PAGE ENTRY ENGINE",
+      "addr": "L9",
+      "expr": "IF(C9=0,\"\u23f3 ENTER DATA\",IF(I9>=C9*0.9,\"\u2705 PASS\",\"\u26a0\ufe0f CHECK\"))",
+      "value": "\u23f3 ENTER DATA"
+    }
+  ],
+  "verdict": {
+    "total_cells": 808,
+    "formula_cells": 195,
+    "string_cells": 177,
+    "symbol_table": 119,
+    "formula_ratio": "24.1%",
+    "status": "PROVEN"
+  }
+}
