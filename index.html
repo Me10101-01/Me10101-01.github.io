@@ -171,10 +171,10 @@ select option{background:#0D1B2A}
 </div>
 </div>
 <script>
-var C={"brock2026":"PO4406","garza":"sprat3","lyb":"corpus","admin":"sagco1"};
+var C={"brock2026":"po4406","garza":"sprat3","lyb":"corpus","admin":"sagco1"};
 function doLogin(){
   var u=document.getElementById("lu").value.trim().toLowerCase();
-  var p=document.getElementById("lp").value.trim();
+  var p=document.getElementById("lp").value.trim().toLowerCase();
   if(C[u]&&C[u]===p){
     sessionStorage.setItem("sa","1");
     document.getElementById("login-gate").style.display="none";
