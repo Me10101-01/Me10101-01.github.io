@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delay Attribution Report — PO 4406147216 | LyondellBasell CC</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:       #0D1117;
+    --steel:     #1C2B3A;
+    --mid:       #4A5568;
+    --muted:     #718096;
+    --rule:      #E2E8F0;
+    --page:      #F7F9FC;
+    --white:     #FFFFFF;
+    --brock-red: #C0182A;
+    --lyb-green: #00843D;
+    --amber:     #D97706;
+    --blue:      #1D4ED8;
+    --mono:      'IBM Plex Mono', monospace;
+    --sans:      'Inter', sans-serif;
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--page);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── LETTERHEAD ── */
+  .letterhead {
+    background: var(--steel);
+    color: var(--white);
+    padding: 0;
+    display: grid;
+    grid-template-columns: 6px 1fr;
+  }
+  .letterhead-accent { background: var(--brock-red); }
+  .letterhead-body { padding: 28px 40px; }
+  .letterhead-eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #94A3B8;
+    margin-bottom: 8px;
+  }
+  .letterhead-title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+  .letterhead-sub {
+    font-size: 13px;
+    color: #94A3B8;
+    font-weight: 400;
+  }
+  .letterhead-meta {
+    margin-top: 20px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .meta-item { }
+  .meta-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #64748B;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .meta-value {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  /* ── MAIN ── */
+  .main { max-width: 960px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  /* ── VERDICT BANNER ── */
+  .verdict {
+    border-left: 4px solid var(--brock-red);
+    background: var(--white);
+    padding: 20px 24px;
+    margin-bottom: 36px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .verdict-icon {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .verdict-text h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--brock-red);
+    letter-spacing: -0.01em;
+  }
+  .verdict-text p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.55;
+  }
+  .verdict-text code {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: #F1F5F9;
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--brock-red);
+    font-weight: 500;
+  }
+
+  /* ── SECTION ── */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── KPI STRIP ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .kpi {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 18px 16px;
+    border-top: 3px solid var(--rule);
+  }
+  .kpi.red   { border-top-color: var(--brock-red); }
+  .kpi.amber { border-top-color: var(--amber); }
+  .kpi.green { border-top-color: var(--lyb-green); }
+  .kpi.blue  { border-top-color: var(--blue); }
+  .kpi-num {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .kpi-unit {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .kpi-desc {
+    font-size: 11px;
+    color: var(--mid);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ── DELAY TABLE ── */
+  .table-wrap {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    overflow-x: auto;
+    margin-bottom: 36px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  thead th {
+    background: var(--steel);
+    color: var(--white);
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 11px 14px;
+    text-align: left;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  tbody tr { border-bottom: 1px solid var(--rule); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #F8FAFC; }
+  td { padding: 11px 14px; vertical-align: top; }
+  .del-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .cat-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .cat-WEATHER   { background: #FEF3C7; color: #92400E; }
+  .cat-SAFETY    { background: #FEE2E2; color: #991B1B; }
+  .cat-PERSONNEL { background: #FFF7ED; color: #9A3412; }
+  .cat-RIGGING   { background: #EFF6FF; color: #1E40AF; }
+  .hrs-num {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .mh-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--brock-red);
+    font-weight: 600;
+  }
+  .desc-cell { max-width: 260px; color: var(--mid); font-size: 12px; line-height: 1.45; }
+  .verified-y {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--lyb-green);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .verified-n {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--amber);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  tfoot td {
+    background: #F1F5F9;
+    font-weight: 700;
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 12px 14px;
+    border-top: 2px solid var(--steel);
+  }
+  tfoot .total-label { color: var(--mid); letter-spacing: 0.06em; text-transform: uppercase; }
+  tfoot .total-hrs { color: var(--brock-red); font-size: 14px; }
+  tfoot .total-mh  { color: var(--brock-red); font-size: 14px; }
+
+  /* ── SCOPE JUSTIFICATION ── */
+  .scope-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .scope-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 20px;
+  }
+  .scope-card h3 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--steel);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .scope-card ul { list-style: none; }
+  .scope-card ul li {
+    font-size: 12.5px;
+    color: var(--mid);
+    padding: 5px 0;
+    border-bottom: 1px solid #F1F5F9;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    line-height: 1.4;
+  }
+  .scope-card ul li::before {
+    content: '→';
+    color: var(--brock-red);
+    font-size: 11px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ── MATH BOX ── */
+  .math-box {
+    background: var(--steel);
+    color: var(--white);
+    padding: 24px 28px;
+    margin-bottom: 36px;
+    font-family: var(--mono);
+  }
+  .math-box .math-title {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #64748B;
+    margin-bottom: 16px;
+  }
+  .math-eq {
+    font-size: 14px;
+    line-height: 2;
+    color: #E2E8F0;
+  }
+  .math-eq .var { color: #93C5FD; }
+  .math-eq .val { color: #FCA5A5; font-weight: 600; }
+  .math-eq .result { color: #6EE7B7; font-weight: 700; font-size: 16px; }
+  .math-eq .op { color: #64748B; }
+  .math-rule {
+    border: none;
+    border-top: 1px solid #334155;
+    margin: 12px 0;
+  }
+  .math-note {
+    font-size: 10px;
+    color: #94A3B8;
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  .report-footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-left p {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .footer-left strong { color: var(--ink); }
+  .footer-right {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: #CBD5E1;
+    text-align: right;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 2;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .kpi-grid { grid-template-columns: repeat(2,1fr); }
+    .scope-grid { grid-template-columns: 1fr; }
+    .letterhead-meta { gap: 16px; }
+    .main { padding: 24px 16px 60px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .letterhead { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .kpi, .table-wrap, .verdict, .math-box { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ LETTERHEAD ══ -->
+<header class="letterhead">
+  <div class="letterhead-accent"></div>
+  <div class="letterhead-body">
+    <div class="letterhead-eyebrow">Delay Attribution Report · Prepared by Strategickhaos DAO LLC</div>
+    <div class="letterhead-title">Field Delay & Variance Attribution</div>
+    <div class="letterhead-sub">Rope Access CUI Insulation — LyondellBasell Corpus Christi Complex</div>
+    <div class="letterhead-meta">
+      <div class="meta-item">
+        <span class="meta-label">Purchase Order</span>
+        <span class="meta-value">4406147216</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Circuit</span>
+        <span class="meta-value">C-1602-O-1B</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Contractor</span>
+        <span class="meta-value">Brock Group · Rope Access</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Supervisor (SPRAT L3)</span>
+        <span class="meta-value">Domenic Garza</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Report Date</span>
+        <span class="meta-value">June 23, 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Site Address</span>
+        <span class="meta-value">1501 McKinzie Rd · CC TX 78410</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ MAIN ══ -->
+<main class="main">
+
+  <!-- Verdict -->
+  <div class="verdict">
+    <div class="verdict-icon">⚠️</div>
+    <div class="verdict-text">
+      <h2>Core Finding: Budget Balance ≠ Work Remaining</h2>
+      <p>
+        Any variance figure presented without subtracting documented delay hours is <strong>not a production overrun</strong> —
+        it is an undifferentiated hour balance. This report attributes <code>27.5 hrs / 94 man-hrs</code> of non-production
+        time to verifiable external events: client-mandated safety stand-downs, weather rainouts, and personnel audits.
+        These hours must be removed from gross variance before any performance conclusion is drawn.
+        <br><br>
+        <strong>Brock Rope Access</strong> was the only compliant execution pathway for this elevation and confined-space scope,
+        per LYB GoalZERO standards and anchor-point constraints on 3-inch pipe systems.
+      </p>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="section-label">Delay Summary — At a Glance</div>
+  <div class="kpi-grid">
+    <div class="kpi red">
+      <div class="kpi-num">6</div>
+      <div class="kpi-unit">Delay Events</div>
+      <div class="kpi-desc">Logged with date, time, category, and responsible party</div>
+    </div>
+    <div class="kpi amber">
+      <div class="kpi-num">27.5</div>
+      <div class="kpi-unit">Hours Lost</div>
+      <div class="kpi-desc">Direct production time removed from RA scope window</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-num">94</div>
+      <div class="kpi-unit">Man-Hours Lost</div>
+      <div class="kpi-desc">4-man crew × hours lost per event (formulas live in xlsx)</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-num">4</div>
+      <div class="kpi-unit">Verified Events</div>
+      <div class="kpi-desc">DEL-001, DEL-002, DEL-003, DEL-005 confirmed; 2 pending</div>
+    </div>
+  </div>
+
+  <!-- Delay Table -->
+  <div class="section-label">Event Log — Full Record</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>DEL #</th>
+          <th>Date</th>
+          <th>Category</th>
+          <th>Circuit</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Hrs Lost</th>
+          <th>Man-Hrs</th>
+          <th>Responsible Party</th>
+          <th>Description</th>
+          <th>Recovery</th>
+          <th>Verified</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="del-num">DEL-001</td>
+          <td>6/3/2026&nbsp;Wed</td>
+          <td><span class="cat-badge cat-WEATHER">Weather</span></td>
+          <td>C-1602-O-1B</td>
+          <td>11:45</td>
+          <td>~12:45</td>
+          <td class="hrs-num">1.0</td>
+          <td class="mh-num">4.0</td>
+          <td>Weather / Client</td>
+          <td class="desc-cell">Rain delay at 11:45 — ~60 min max. Leave renewed pending weather clear.</td>
+          <td class="desc-cell">Stand-down; re-mobilize when clear</td>
+          <td class="verified-y">✓ YES</td>
+        </tr>
+        <tr>
+          <td class="del-num">DEL-002</td>
+          <td>6/10/2026&nbsp;Wed</td>
+          <td><span class="cat-badge cat-RIGGING">Rigging</span></td>
+          <td>ALL</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="hrs-num">0.0</td>
+          <td class="mh-num">0.0</td>
+          <td>Brock / SAGCO</td>
+          <td class="desc-cell">Started rigging PO. Mobilization day — no production clock running.</td>
+          <td class="desc-cell">Rigging established; production ready 6/11</td>
+          <td class="verified-y">✓ YES</td>
+        </tr>
+        <tr>
+          <td class="del-num">DEL-003</td>
+          <td>6/11/2026&nbsp;Thu</td>
+          <td><span class="cat-badge cat-SAFETY">Safety</span></td>
+          <td>ALL</td>
+          <td>00:00</td>
+          <td>16:00</td>
+          <td class="hrs-num">10.0</td>
+          <td class="mh-num">40.0</td>
+          <td style="color:#991B1B;font-weight:600;">CLIENT — LYB</td>
+          <td class="desc-cell"><strong>Global Safety Day</strong> — mandatory full site stand-down. All 4 men held. Zero production.</td>
+          <td class="desc-cell">Resume production 6/12</td>
+          <td class="verified-y">✓ YES</td>
+        </tr>
+        <tr>
+          <td class="del-num">DEL-004</td>
+          <td>6/12/2026&nbsp;Fri</td>
+          <td><span class="cat-badge cat-PERSONNEL">Personnel</span></td>
+          <td>ALL</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="hrs-num">8.0</td>
+          <td class="mh-num">32.0</td>
+          <td>Brock / PM</td>
+          <td class="desc-cell">Audit — Andrews start date. Personnel documentation audit; production impact TBD.</td>
+          <td class="desc-cell">Confirm Andrews start date; update manpower log</td>
+          <td class="verified-n">⏳ PENDING</td>
+        </tr>
+        <tr>
+          <td class="del-num">DEL-005</td>
+          <td>6/15/2026&nbsp;Sun</td>
+          <td><span class="cat-badge cat-WEATHER">Weather</span></td>
+          <td>C-1602-O-1B</td>
+          <td>00:00</td>
+          <td>14:30</td>
+          <td class="hrs-num">6.5</td>
+          <td class="mh-num">26.0</td>
+          <td>Weather</td>
+          <td class="desc-cell">Rainout — cleared by 2:30 PM. Monday morning production lost to weather.</td>
+          <td class="desc-cell">Resume afternoon shift after weather clear</td>
+          <td class="verified-y">✓ YES</td>
+        </tr>
+        <tr>
+          <td class="del-num">DEL-006</td>
+          <td>6/16/2026&nbsp;Mon</td>
+          <td><span class="cat-badge cat-WEATHER">Weather</span></td>
+          <td>C-1602-O-1B</td>
+          <td>08:00</td>
+          <td>TBD</td>
+          <td class="hrs-num">2.0</td>
+          <td class="mh-num">8.0</td>
+          <td>Weather</td>
+          <td class="desc-cell">Rainout at 8 AM. End time TBD — estimated 2 hrs minimum from field notes.</td>
+          <td class="desc-cell">Stand-down; weather monitor; re-mobilize</td>
+          <td class="verified-n">⏳ PENDING</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="6" class="total-label">TOTALS (6 events · 4-man crew)</td>
+          <td class="total-hrs">27.5 hrs</td>
+          <td class="total-mh">110.0 man-hrs</td>
+          <td colspan="4" style="color:var(--muted);font-size:10px;">Live formulas in attached .xlsx · Update TBD cells to recalculate</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- Math box -->
+  <div class="section-label">Variance Calculation — Correct Method</div>
+  <div class="math-box">
+    <div class="math-title">// Correct variance equation · PO 4406147216</div>
+    <div class="math-eq">
+      <span class="var">Gross Reported Variance</span>  <span class="op">=</span>  <span class="val">Presented figure (hrs)</span><br>
+      <span class="op">&nbsp;&nbsp;&nbsp;&nbsp;−</span>  <span class="var">DEL-003 Global Safety Day</span>  <span class="op">=</span>  <span class="val">40 man-hrs (CLIENT mandate)</span><br>
+      <span class="op">&nbsp;&nbsp;&nbsp;&nbsp;−</span>  <span class="var">DEL-005 + DEL-006 Rainouts</span>  <span class="op">=</span>  <span class="val">34 man-hrs (weather)</span><br>
+      <span class="op">&nbsp;&nbsp;&nbsp;&nbsp;−</span>  <span class="var">DEL-001 Rain delay</span>  <span class="op">=</span>  <span class="val">4 man-hrs</span><br>
+      <span class="op">&nbsp;&nbsp;&nbsp;&nbsp;−</span>  <span class="var">DEL-004 Personnel audit</span>  <span class="op">=</span>  <span class="val">32 man-hrs (TBD)</span><br>
+      <hr class="math-rule">
+      <span class="var">Net Production Variance</span>  <span class="op">=</span>  <span class="result">Gross − 110 man-hrs (documented)</span>
+    </div>
+    <div class="math-note">
+      Note: DEL-004 (Andrews audit) and DEL-006 (6/16 rainout end time) are PENDING final verification.
+      Math result ≠ Field approval. No overrun conclusion is valid until delay-attributed hours are subtracted.
+      Possible Saturday makeup session to be logged as RECOVERY event if approved.
+    </div>
+  </div>
+
+  <!-- Scope justification -->
+  <div class="section-label">Rope Access Scope Justification</div>
+  <div class="scope-grid">
+    <div class="scope-card">
+      <h3>Why Rope Access Was Required</h3>
+      <ul>
+        <li>Elevation constraints: heights and confined spaces inaccessible to scaffold or lift</li>
+        <li>3-inch pipe anchor-point limitations — scaffold attachment not feasible</li>
+        <li>LYB GoalZERO mandates incident-free access; RA dual-rope system is inherently fail-safe</li>
+        <li>Traditional access (scaffold, crane basket) not feasible due to time sensitivity and economics</li>
+        <li>Brock RA: two-rope system, SPRAT L3 supervision on-site, integrated trades team</li>
+      </ul>
+    </div>
+    <div class="scope-card">
+      <h3>Brock Rope Access Advantages (per Brock.com)</h3>
+      <ul>
+        <li><strong>Cost effective</strong> — fewer personnel and equipment, minimal downtime</li>
+        <li><strong>More efficient</strong> — quicker installation, less interference with facility ops</li>
+        <li><strong>Increased safety</strong> — process and procedure focus, incident and injury free target</li>
+        <li><strong>Less manpower</strong> — work hours significantly reduced per task vs. other access</li>
+        <li>Integrated insulation, NDE, and coatings team mobilized under single PO</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Action items -->
+  <div class="section-label">Open Action Items</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Item</th><th>Owner</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="del-num">AI-001</td>
+          <td>Confirm DEL-004 Andrews audit hours impact</td>
+          <td>Brock PM</td>
+          <td class="verified-n">⏳ OPEN</td>
+        </tr>
+        <tr>
+          <td class="del-num">AI-002</td>
+          <td>Confirm DEL-006 exact end time (6/16 rainout)</td>
+          <td>Site Supervisor</td>
+          <td class="verified-n">⏳ OPEN</td>
+        </tr>
+        <tr>
+          <td class="del-num">AI-003</td>
+          <td>Log Saturday makeup session as RECOVERY event if approved</td>
+          <td>Domenic Garza</td>
+          <td class="verified-n">⏳ PENDING APPROVAL</td>
+        </tr>
+        <tr>
+          <td class="del-num">AI-004</td>
+          <td>Submit this delay log to PM (Gregorio) for co-signature / acknowledgment</td>
+          <td>Domenic Garza</td>
+          <td class="verified-n">⏳ OPEN</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="report-footer">
+    <div class="footer-left">
+      <p>
+        <strong>Prepared by:</strong> Domenic Garza · SPRAT Level 3 #2300689 · Rope Access Supervisor<br>
+        <strong>Entity:</strong> Strategickhaos DAO LLC · EIN 39-2900295 · Wyoming<br>
+        <strong>Contractor:</strong> Brock Group · Rope Access Services · PO 4406147216<br>
+        <strong>Client:</strong> LyondellBasell · Corpus Christi Complex · 1501 McKinzie Rd · CC TX 78410
+      </p>
+    </div>
+    <div class="footer-right">
+      SAGCO-DELAY-REPORT-001<br>
+      PO 4406147216<br>
+      Generated: 2026-06-23<br>
+      xlsx attached for live formulas
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
