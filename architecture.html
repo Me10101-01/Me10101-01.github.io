@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture - Strategickhaos Sovereign Mesh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+            margin: 20px 0 10px;
+        }
+        
+        .ascii-art {
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            font-size: 0.8em;
+            line-height: 1.2;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+        
+        .component {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏗️ Architecture Documentation</h1>
+            <p>Technical overview of the Sovereign Mesh infrastructure</p>
+            <a href="index.html" class="button">← Back to Home</a>
+        </header>
+
+        <div class="card">
+            <h2>🎯 System Overview</h2>
+            <p>The Strategickhaos Sovereign Mesh is a distributed AI infrastructure that orchestrates multiple AI models, services, and integrations into a cohesive autonomous system.</p>
+            
+            <h3>Core Principles</h3>
+            <ul>
+                <li><strong>Sovereignty:</strong> Complete control over infrastructure and data</li>
+                <li><strong>Distributed Intelligence:</strong> Multiple AI models working in consensus</li>
+                <li><strong>Event-Driven:</strong> Reactive architecture based on signals and webhooks</li>
+                <li><strong>Scalable:</strong> Kubernetes-native for horizontal scaling</li>
+                <li><strong>Modular:</strong> Loosely coupled services for independent evolution</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🧩 Component Architecture</h2>
+            
+            <div class="component">
+                <h3>👑 Queen Orchestrator</h3>
+                <p><strong>Technology:</strong> Node.js + HTTP Server</p>
+                <p><strong>Role:</strong> Central nervous system coordinating all signals and responses</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>Receive signals from external sources (Zapier, GitHub, Thread Bank)</li>
+                    <li>Route signals to appropriate handlers</li>
+                    <li>Maintain signal history and state</li>
+                    <li>Provide health checks and monitoring endpoints</li>
+                </ul>
+                <p><strong>Ports:</strong> 3000 (configurable via PORT env var)</p>
+            </div>
+
+            <div class="component">
+                <h3>🧠 LLM Council</h3>
+                <p><strong>Technology:</strong> Python + Flask + Transformers</p>
+                <p><strong>Role:</strong> Multi-model AI consensus system</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>Run 5 independent Llama models in parallel</li>
+                    <li>Collect responses from all models</li>
+                    <li>Implement consensus algorithm (majority voting)</li>
+                    <li>Return synthesized response</li>
+                </ul>
+                <p><strong>Ports:</strong> 5001-5005 (one per model)</p>
+            </div>
+
+            <div class="component">
+                <h3>💜 ValorYield Engine</h3>
+                <p><strong>Technology:</strong> TBD (Financial OS)</p>
+                <p><strong>Role:</strong> Financial operations and treasury management</p>
+                <p><strong>Status:</strong> Planned for future implementation</p>
+            </div>
+
+            <div class="component">
+                <h3>🔧 Microservices Layer</h3>
+                <p><strong>Technology:</strong> Various</p>
+                <p><strong>Role:</strong> Domain-specific services</p>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>Academic integration service</li>
+                    <li>GitHub automation service</li>
+                    <li>Discord bot service</li>
+                    <li>Analytics and reporting service</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📡 Data Flow</h2>
+            
+            <div class="ascii-art">┌──────────────────────────────────────────────────────────────────┐
+│                        SIGNAL SOURCES                            │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  📧 Zapier        🔗 GitHub        💰 Thread Bank    📱 Discord  │
+│  (SNHU)           (Webhooks)       (Financial)       (Commands)  │
+│                                                                  │
+└───────┬──────────────┬────────────────┬──────────────┬──────────┘
+        │              │                │              │
+        ▼              ▼                ▼              ▼
+┌──────────────────────────────────────────────────────────────────┐
+│                      👑 QUEEN ORCHESTRATOR                       │
+│                                                                  │
+│  ┌────────────┐  ┌────────────┐  ┌────────────┐                │
+│  │  Router    │  │  Signal    │  │  State     │                │
+│  │  Handler   │  │  Queue     │  │  Manager   │                │
+│  └────────────┘  └────────────┘  └────────────┘                │
+│                                                                  │
+└───────┬──────────────┬────────────────┬──────────────┬──────────┘
+        │              │                │              │
+        ▼              ▼                ▼              ▼
+┌────────────┐  ┌────────────┐  ┌────────────┐  ┌────────────┐
+│ LLM        │  │ ValorYield │  │ Services   │  │ Analytics  │
+│ Council    │  │ Engine     │  │ Layer      │  │ Pipeline   │
+└────────────┘  └────────────┘  └────────────┘  └────────────┘
+        │              │                │              │
+        └──────────────┴────────────────┴──────────────┘
+                            │
+                            ▼
+                    ┌──────────────┐
+                    │   Response   │
+                    │   Handler    │
+                    └──────────────┘</div>
+        </div>
+
+        <div class="card">
+            <h2>☁️ Infrastructure Layers</h2>
+            
+            <h3>Layer 1: Compute</h3>
+            <ul>
+                <li><strong>GKE Cluster:</strong> jarvis-001 (34.29.28.27)</li>
+                <li><strong>GKE Autopilot:</strong> autopilot-1 (35.192.28.x)</li>
+                <li><strong>Cloud Shell:</strong> Development and testing environment</li>
+            </ul>
+
+            <h3>Layer 2: Orchestration</h3>
+            <ul>
+                <li><strong>Kubernetes:</strong> Container orchestration</li>
+                <li><strong>Namespaces:</strong> sovereign-mesh (isolated environment)</li>
+                <li><strong>Services:</strong> LoadBalancer for external access</li>
+                <li><strong>Deployments:</strong> Multi-replica for high availability</li>
+            </ul>
+
+            <h3>Layer 3: Application</h3>
+            <ul>
+                <li><strong>Queen:</strong> Node.js runtime</li>
+                <li><strong>LLM Council:</strong> Python + Docker containers</li>
+                <li><strong>Services:</strong> Microservices architecture</li>
+            </ul>
+
+            <h3>Layer 4: Data & State</h3>
+            <ul>
+                <li><strong>In-Memory:</strong> Signal queue and recent history</li>
+                <li><strong>Persistent:</strong> TBD (Cloud Storage, Database)</li>
+                <li><strong>Cache:</strong> TBD (Redis, Memcached)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🔐 Security Architecture</h2>
+            
+            <h3>Network Security</h3>
+            <ul>
+                <li>HTTPS/TLS encryption for all external endpoints</li>
+                <li>Kubernetes Network Policies for pod-to-pod communication</li>
+                <li>LoadBalancer with Cloud Armor for DDoS protection</li>
+            </ul>
+
+            <h3>Authentication & Authorization</h3>
+            <ul>
+                <li>GitHub App OAuth for webhook verification</li>
+                <li>API keys for Zapier integration</li>
+                <li>Service-to-service auth via Kubernetes service accounts</li>
+            </ul>
+
+            <h3>Data Protection</h3>
+            <ul>
+                <li>Encryption at rest for sensitive data</li>
+                <li>Encryption in transit (TLS 1.3)</li>
+                <li>Regular security audits and updates</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>📈 Scalability Design</h2>
+            
+            <h3>Horizontal Scaling</h3>
+            <ul>
+                <li><strong>Queen:</strong> 2+ replicas with LoadBalancer distribution</li>
+                <li><strong>LLM Council:</strong> Independent scaling per model</li>
+                <li><strong>Services:</strong> Auto-scaling based on CPU/memory</li>
+            </ul>
+
+            <h3>Vertical Scaling</h3>
+            <ul>
+                <li>GPU nodes for LLM inference (optional)</li>
+                <li>Increased memory for model caching</li>
+                <li>Faster CPUs for queen processing</li>
+            </ul>
+
+            <h3>Performance Optimization</h3>
+            <ul>
+                <li>Response caching for repeated queries</li>
+                <li>Connection pooling for external services</li>
+                <li>Async processing for long-running tasks</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🔄 CI/CD Pipeline</h2>
+            
+            <h3>Development Workflow</h3>
+            <ol>
+                <li>Local development in Cloud Shell</li>
+                <li>Git push to GitHub repository</li>
+                <li>GitHub Actions triggers build</li>
+                <li>Container images built and pushed to GCR</li>
+                <li>Kubernetes deployment updated</li>
+                <li>Health checks verify deployment</li>
+            </ol>
+
+            <h3>Testing Strategy</h3>
+            <ul>
+                <li><strong>Unit Tests:</strong> Jest (Queen), pytest (LLM Council)</li>
+                <li><strong>Integration Tests:</strong> End-to-end signal flow</li>
+                <li><strong>Load Tests:</strong> Artillery.io for performance</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🎯 Future Architecture</h2>
+            
+            <h3>Planned Enhancements</h3>
+            <ul>
+                <li>🔄 Event Streaming with Apache Kafka</li>
+                <li>📊 Real-time Analytics Dashboard</li>
+                <li>🤖 Autonomous Task Execution</li>
+                <li>🌐 Multi-region Deployment</li>
+                <li>🔗 Blockchain Integration for DAO Operations</li>
+                <li>🎨 Web UI for System Management</li>
+                <li>📱 Mobile App for Monitoring</li>
+            </ul>
+
+            <h3>Technology Radar</h3>
+            <ul>
+                <li><strong>Adopt:</strong> Kubernetes, Docker, Node.js, Python</li>
+                <li><strong>Trial:</strong> Kafka, GraphQL, WebSockets</li>
+                <li><strong>Assess:</strong> Rust microservices, WASM</li>
+                <li><strong>Hold:</strong> Monolithic architecture</li>
+            </ul>
+        </div>
+
+        <footer style="text-align: center; padding: 40px 20px; opacity: 0.8;">
+            <p>© 2025 Strategickhaos DAO LLC</p>
+            <a href="index.html" class="button">← Back to Home</a>
+        </footer>
+    </div>
+</body>
+</html>

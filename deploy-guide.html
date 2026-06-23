@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Guide - Strategickhaos Sovereign Mesh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+            margin: 20px 0 10px;
+        }
+        
+        pre {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .step {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #FFD700;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .step-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #FFD700;
+            margin-right: 10px;
+        }
+        
+        .warning {
+            background: rgba(255, 193, 7, 0.2);
+            border-left: 4px solid #FFC107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .success {
+            background: rgba(76, 175, 80, 0.2);
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Deployment Guide</h1>
+            <p>Step-by-step instructions for deploying the Sovereign Mesh</p>
+            <a href="index.html" class="button">← Back to Home</a>
+        </header>
+
+        <div class="card">
+            <h2>🎯 Prerequisites</h2>
+            <p>Before deploying, ensure you have:</p>
+            <ul>
+                <li>✅ Google Cloud account with billing enabled</li>
+                <li>✅ Access to Google Cloud Shell</li>
+                <li>✅ Basic knowledge of Kubernetes (optional but helpful)</li>
+                <li>✅ GitHub account (for webhook integration)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>⚡ Quick Deploy (Recommended)</h2>
+            
+            <div class="step">
+                <span class="step-number">1.</span>
+                <strong>Open Google Cloud Shell</strong>
+                <p>Navigate to <a href="https://console.cloud.google.com" style="color: #FFD700;">console.cloud.google.com</a> and click the Cloud Shell icon in the top right.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">2.</span>
+                <strong>Run the One-Line Installer</strong>
+                <p>Copy and paste this command:</p>
+                <pre>curl -fsSL https://me10101-01.github.io/deploy.sh | bash</pre>
+            </div>
+
+            <div class="step">
+                <span class="step-number">3.</span>
+                <strong>Wait for Initialization</strong>
+                <p>The script will create the complete Sovereign Mesh structure in <code>~/sovereign-mesh/</code></p>
+            </div>
+
+            <div class="success">
+                ✅ <strong>Success!</strong> Your Sovereign Mesh infrastructure is now ready.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔧 Manual Deployment</h2>
+            
+            <h3>Step 1: Create Directory Structure</h3>
+            <pre>mkdir -p ~/sovereign-mesh/{queen,valoryield,llm-council,services}
+cd ~/sovereign-mesh</pre>
+
+            <h3>Step 2: Deploy Queen Orchestrator</h3>
+            <pre># Navigate to queen directory
+cd ~/sovereign-mesh/queen
+
+# The queen.js file should already be created by the setup script
+# If not, download it from:
+curl -O https://me10101-01.github.io/queen.js
+
+# Install dependencies and start
+npm install
+npm start</pre>
+
+            <div class="warning">
+                ⚠️ <strong>Note:</strong> Queen will run on port 3000 by default. Use Cloud Shell's Web Preview to access it.
+            </div>
+
+            <h3>Step 3: Access Queen via Web Preview</h3>
+            <div class="step">
+                <ol>
+                    <li>Click the <strong>Web Preview</strong> button in Cloud Shell (top right)</li>
+                    <li>Select <strong>Preview on port 3000</strong></li>
+                    <li>You should see: <code>{"service":"Strategickhaos Queen","version":"1.0.0","status":"online"}</code></li>
+                </ol>
+            </div>
+
+            <h3>Step 4: Deploy to Kubernetes (Optional)</h3>
+            <pre># Create namespace and deploy
+kubectl apply -f k8s-deploy.yaml
+
+# Check deployment status
+kubectl get pods -n sovereign-mesh
+
+# Get external IP (may take a few minutes)
+kubectl get service -n sovereign-mesh</pre>
+        </div>
+
+        <div class="card">
+            <h2>🧠 LLM Council Setup</h2>
+            
+            <h3>Docker Compose Deployment</h3>
+            <pre># Navigate to LLM Council
+cd ~/sovereign-mesh/llm-council
+
+# Start all models
+for llm in llama1 llama2 llama3 llama4 llama5; do
+  cd $llm
+  docker-compose up -d
+  cd ..
+done
+
+# Verify all models are running
+docker ps</pre>
+
+            <div class="success">
+                ✅ All 5 Llama models should now be running on ports 5001-5005
+            </div>
+
+            <h3>Test LLM Council</h3>
+            <pre># Run the council orchestrator
+python3 llm-council/main.py
+
+# Test individual models
+curl http://localhost:5001/health
+curl http://localhost:5002/health
+curl http://localhost:5003/health</pre>
+        </div>
+
+        <div class="card">
+            <h2>🔗 Integration Setup</h2>
+            
+            <h3>GitHub Webhook</h3>
+            <ol>
+                <li>Get your Queen's external IP or URL</li>
+                <li>Go to your GitHub repository settings</li>
+                <li>Navigate to <strong>Webhooks</strong> → <strong>Add webhook</strong></li>
+                <li>Set Payload URL to: <code>https://your-queen-url/webhooks/github</code></li>
+                <li>Content type: <code>application/json</code></li>
+                <li>Select events you want to receive</li>
+            </ol>
+
+            <h3>Zapier Integration (Academic Signals)</h3>
+            <ol>
+                <li>Create a new Zap in Zapier</li>
+                <li>Trigger: <strong>Email Parser</strong> (for SNHU emails)</li>
+                <li>Action: <strong>Webhooks by Zapier</strong></li>
+                <li>POST to: <code>https://your-queen-url/signals/academic</code></li>
+                <li>Include parsed email data in the payload</li>
+            </ol>
+
+            <h3>Thread Bank Integration</h3>
+            <pre># Configure financial signals endpoint
+export THREAD_BANK_WEBHOOK="https://your-queen-url/signals/financial"
+
+# Test the connection
+curl -X POST $THREAD_BANK_WEBHOOK \
+  -H "Content-Type: application/json" \
+  -d '{"event":"test","amount":100}'</pre>
+        </div>
+
+        <div class="card">
+            <h2>🛡️ DNS Configuration</h2>
+            
+            <h3>Point Custom Domain to Queen</h3>
+            <ol>
+                <li>Get your LoadBalancer IP:
+                    <pre>kubectl get service queen -n sovereign-mesh</pre>
+                </li>
+                <li>In your DNS provider, create an A record:
+                    <ul>
+                        <li>Name: <code>queen</code></li>
+                        <li>Type: <code>A</code></li>
+                        <li>Value: <code>[LoadBalancer IP]</code></li>
+                    </ul>
+                </li>
+                <li>Wait for DNS propagation (5-30 minutes)</li>
+                <li>Test: <code>curl https://queen.strategickhaos.ai/health</code></li>
+            </ol>
+
+            <div class="warning">
+                ⚠️ <strong>Security:</strong> Add SSL/TLS certificate using cert-manager or Google Cloud Load Balancer
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 Monitoring & Verification</h2>
+            
+            <h3>Health Checks</h3>
+            <pre># Check Queen status
+curl https://queen.strategickhaos.ai/health
+
+# Check all LLM models
+for port in 5001 5002 5003 5004 5005; do
+  curl http://localhost:$port/health
+done
+
+# Check Kubernetes pods
+kubectl get pods -n sovereign-mesh
+kubectl logs -f -n sovereign-mesh deployment/queen</pre>
+
+            <h3>Expected Responses</h3>
+            <div class="success">
+                <strong>Queen Health:</strong>
+                <pre>{"ok":true,"service":"queen"}</pre>
+            </div>
+            
+            <div class="success">
+                <strong>LLM Health:</strong>
+                <pre>{"ok":true,"model":"llama1"}</pre>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🎬 Next Steps</h2>
+            <ol>
+                <li>✅ Deploy Queen Orchestrator</li>
+                <li>✅ Set up LLM Council</li>
+                <li>✅ Configure DNS</li>
+                <li>⬜ Implement ValorYield Engine</li>
+                <li>⬜ Add monitoring and alerting</li>
+                <li>⬜ Set up CI/CD pipelines</li>
+                <li>⬜ Configure security policies</li>
+                <li>⬜ Scale LLM Council based on load</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>🆘 Troubleshooting</h2>
+            
+            <h3>Queen won't start</h3>
+            <ul>
+                <li>Check Node.js is installed: <code>node --version</code></li>
+                <li>Verify port 3000 is not in use: <code>lsof -i :3000</code></li>
+                <li>Check logs: <code>npm start</code></li>
+            </ul>
+
+            <h3>LLM models failing</h3>
+            <ul>
+                <li>Ensure Docker is running: <code>docker ps</code></li>
+                <li>Check disk space: <code>df -h</code></li>
+                <li>Review logs: <code>docker logs [container-id]</code></li>
+            </ul>
+
+            <h3>Kubernetes deployment issues</h3>
+            <ul>
+                <li>Check cluster status: <code>kubectl cluster-info</code></li>
+                <li>View events: <code>kubectl get events -n sovereign-mesh</code></li>
+                <li>Describe pod: <code>kubectl describe pod [pod-name] -n sovereign-mesh</code></li>
+            </ul>
+        </div>
+
+        <footer style="text-align: center; padding: 40px 20px; opacity: 0.8;">
+            <p>© 2025 Strategickhaos DAO LLC</p>
+            <a href="index.html" class="button">← Back to Home</a>
+        </footer>
+    </div>
+</body>
+</html>

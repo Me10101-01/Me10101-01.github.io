@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference - Strategickhaos Sovereign Mesh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+            margin: 20px 0 10px;
+        }
+        
+        .endpoint {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .method {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .get {
+            background: #4CAF50;
+        }
+        
+        .post {
+            background: #2196F3;
+        }
+        
+        .put {
+            background: #FF9800;
+        }
+        
+        .delete {
+            background: #F44336;
+        }
+        
+        .path {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2em;
+            color: #FFD700;
+        }
+        
+        pre {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        th {
+            background: rgba(255,255,255,0.1);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📡 API Reference</h1>
+            <p>Complete REST API documentation for Queen Orchestrator</p>
+            <a href="index.html" class="button">← Back to Home</a>
+        </header>
+
+        <div class="card">
+            <h2>🌐 Base URL</h2>
+            <pre>Production:  https://queen.strategickhaos.ai
+Development: http://localhost:3000
+Cloud Shell: https://[your-preview-url]</pre>
+        </div>
+
+        <div class="card">
+            <h2>🔍 General Endpoints</h2>
+            
+            <div class="endpoint">
+                <h3>
+                    <span class="method get">GET</span>
+                    <span class="path">/</span>
+                </h3>
+                <p><strong>Description:</strong> Get service information and available endpoints</p>
+                
+                <h4>Response</h4>
+                <pre>{
+  "service": "Strategickhaos Queen",
+  "version": "1.0.0",
+  "status": "online",
+  "endpoints": [
+    "/health",
+    "/signals/academic",
+    "/webhooks/github"
+  ]
+}</pre>
+            </div>
+
+            <div class="endpoint">
+                <h3>
+                    <span class="method get">GET</span>
+                    <span class="path">/health</span>
+                </h3>
+                <p><strong>Description:</strong> Health check endpoint for monitoring</p>
+                
+                <h4>Response</h4>
+                <pre>{
+  "ok": true,
+  "service": "queen"
+}</pre>
+
+                <h4>Status Codes</h4>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>Service is healthy</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📧 Signal Endpoints</h2>
+            
+            <div class="endpoint">
+                <h3>
+                    <span class="method post">POST</span>
+                    <span class="path">/signals/academic</span>
+                </h3>
+                <p><strong>Description:</strong> Receive academic event signals (from Zapier/SNHU)</p>
+                
+                <h4>Request Body</h4>
+                <pre>{
+  "event": "assignment_due",
+  "course": "CS-499",
+  "title": "Capstone Project",
+  "dueDate": "2025-12-15T23:59:59Z",
+  "priority": "high"
+}</pre>
+
+                <h4>Response</h4>
+                <pre>{
+  "ok": true,
+  "signalId": "550e8400-e29b-41d4-a716-446655440000"
+}</pre>
+
+                <h4>Parameters</h4>
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>event</td>
+                        <td>string</td>
+                        <td>Yes</td>
+                        <td>Type of academic event</td>
+                    </tr>
+                    <tr>
+                        <td>course</td>
+                        <td>string</td>
+                        <td>No</td>
+                        <td>Course identifier</td>
+                    </tr>
+                    <tr>
+                        <td>title</td>
+                        <td>string</td>
+                        <td>No</td>
+                        <td>Event title</td>
+                    </tr>
+                    <tr>
+                        <td>dueDate</td>
+                        <td>string</td>
+                        <td>No</td>
+                        <td>ISO 8601 timestamp</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="endpoint">
+                <h3>
+                    <span class="method post">POST</span>
+                    <span class="path">/signals/financial</span>
+                </h3>
+                <p><strong>Description:</strong> Receive financial signals from Thread Bank</p>
+                
+                <h4>Request Body</h4>
+                <pre>{
+  "event": "transaction",
+  "amount": 1000.00,
+  "currency": "USD",
+  "type": "deposit",
+  "timestamp": "2025-12-04T13:38:24Z"
+}</pre>
+
+                <h4>Response</h4>
+                <pre>{
+  "ok": true,
+  "signalId": "650e8400-e29b-41d4-a716-446655440001"
+}</pre>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔗 Webhook Endpoints</h2>
+            
+            <div class="endpoint">
+                <h3>
+                    <span class="method post">POST</span>
+                    <span class="path">/webhooks/github</span>
+                </h3>
+                <p><strong>Description:</strong> Receive GitHub webhook events</p>
+                
+                <h4>Headers</h4>
+                <table>
+                    <tr>
+                        <th>Header</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>X-GitHub-Event</td>
+                        <td>Event type (push, pull_request, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td>X-Hub-Signature-256</td>
+                        <td>HMAC signature for verification</td>
+                    </tr>
+                </table>
+
+                <h4>Request Body (example: push event)</h4>
+                <pre>{
+  "ref": "refs/heads/main",
+  "repository": {
+    "name": "Me10101-01.github.io",
+    "owner": {
+      "login": "Me10101-01"
+    }
+  },
+  "commits": [
+    {
+      "message": "Update deployment",
+      "author": {
+        "name": "Dom"
+      }
+    }
+  ]
+}</pre>
+
+                <h4>Response</h4>
+                <pre>{
+  "ok": true,
+  "signalId": "750e8400-e29b-41d4-a716-446655440002"
+}</pre>
+
+                <h4>Supported Events</h4>
+                <ul>
+                    <li><code>push</code> - Code pushed to repository</li>
+                    <li><code>pull_request</code> - PR opened/closed/merged</li>
+                    <li><code>issues</code> - Issue created/updated</li>
+                    <li><code>issue_comment</code> - Comment on issue/PR</li>
+                    <li><code>release</code> - Release created</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💜 Treasury Endpoints</h2>
+            
+            <div class="endpoint">
+                <h3>
+                    <span class="method post">POST</span>
+                    <span class="path">/treasury/*</span>
+                </h3>
+                <p><strong>Description:</strong> ValorYield Engine integration endpoints</p>
+                <p><strong>Status:</strong> ⚠️ Planned - Not yet implemented</p>
+                
+                <h4>Planned Endpoints</h4>
+                <ul>
+                    <li><code>POST /treasury/allocate</code> - Allocate funds</li>
+                    <li><code>POST /treasury/distribute</code> - Distribute rewards</li>
+                    <li><code>GET /treasury/balance</code> - Get current balance</li>
+                    <li><code>GET /treasury/history</code> - Transaction history</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🧠 LLM Council API</h2>
+            <p>Each model in the council exposes identical endpoints on different ports.</p>
+            
+            <div class="endpoint">
+                <h3>
+                    <span class="method get">GET</span>
+                    <span class="path">http://localhost:500[1-5]/health</span>
+                </h3>
+                <p><strong>Description:</strong> Health check for individual model</p>
+                
+                <h4>Response</h4>
+                <pre>{
+  "ok": true,
+  "model": "llama1"
+}</pre>
+            </div>
+
+            <div class="endpoint">
+                <h3>
+                    <span class="method post">POST</span>
+                    <span class="path">http://localhost:500[1-5]/inference</span>
+                </h3>
+                <p><strong>Description:</strong> Run inference on the model</p>
+                
+                <h4>Request Body</h4>
+                <pre>{
+  "prompt": "What is the meaning of life?",
+  "max_tokens": 100,
+  "temperature": 0.7
+}</pre>
+
+                <h4>Response</h4>
+                <pre>{
+  "model": "llama1",
+  "response": "Inference placeholder",
+  "tokens_used": 42
+}</pre>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>❌ Error Responses</h2>
+            
+            <h3>404 Not Found</h3>
+            <pre>{
+  "error": "Not found"
+}</pre>
+
+            <h3>500 Internal Server Error</h3>
+            <pre>{
+  "error": "Internal server error",
+  "message": "Failed to process signal"
+}</pre>
+
+            <h3>Status Code Reference</h3>
+            <table>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>Success</td>
+                </tr>
+                <tr>
+                    <td>201</td>
+                    <td>Created</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>Bad Request</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>Not Found</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Internal Server Error</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>🔧 Examples</h2>
+            
+            <h3>cURL Examples</h3>
+            
+            <h4>Health Check</h4>
+            <pre>curl https://queen.strategickhaos.ai/health</pre>
+
+            <h4>Send Academic Signal</h4>
+            <pre>curl -X POST https://queen.strategickhaos.ai/signals/academic \
+  -H "Content-Type: application/json" \
+  -d '{
+    "event": "assignment_due",
+    "course": "CS-499",
+    "title": "Capstone Project"
+  }'</pre>
+
+            <h4>Send Financial Signal</h4>
+            <pre>curl -X POST https://queen.strategickhaos.ai/signals/financial \
+  -H "Content-Type: application/json" \
+  -d '{
+    "event": "transaction",
+    "amount": 1000.00,
+    "type": "deposit"
+  }'</pre>
+
+            <h3>JavaScript/Node.js Example</h3>
+            <pre>const axios = require('axios');
+
+// Send academic signal
+const response = await axios.post(
+  'https://queen.strategickhaos.ai/signals/academic',
+  {
+    event: 'assignment_due',
+    course: 'CS-499',
+    title: 'Capstone Project'
+  }
+);
+
+console.log('Signal ID:', response.data.signalId);</pre>
+
+            <h3>Python Example</h3>
+            <pre>import requests
+
+# Send financial signal
+response = requests.post(
+    'https://queen.strategickhaos.ai/signals/financial',
+    json={
+        'event': 'transaction',
+        'amount': 1000.00,
+        'type': 'deposit'
+    }
+)
+
+print(f"Signal ID: {response.json()['signalId']}")</pre>
+        </div>
+
+        <div class="card">
+            <h2>🔐 Authentication</h2>
+            <p><strong>Current:</strong> No authentication required (development)</p>
+            <p><strong>Planned:</strong></p>
+            <ul>
+                <li>API Key authentication for external services</li>
+                <li>GitHub webhook signature verification</li>
+                <li>JWT tokens for user-facing endpoints</li>
+                <li>OAuth 2.0 for third-party integrations</li>
+            </ul>
+        </div>
+
+        <footer style="text-align: center; padding: 40px 20px; opacity: 0.8;">
+            <p>© 2025 Strategickhaos DAO LLC</p>
+            <a href="index.html" class="button">← Back to Home</a>
+        </footer>
+    </div>
+</body>
+</html>
