@@ -149,7 +149,42 @@ select option{background:#0D1B2A}
 @keyframes pulse{0%{opacity:0.4}50%{opacity:1}100%{opacity:1}}
 </style>
 </head>
-<body>
+<body><div id="login-gate" style="position:fixed;inset:0;z-index:99999;background:#0A0F1A;display:flex;align-items:center;justify-content:center">
+<div style="background:#1C2B3A;border-top:3px solid #C0182A;padding:40px 36px;max-width:400px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,0.6)">
+<div style="text-align:center;margin-bottom:24px">
+<div style="background:#C0182A;color:white;font-family:monospace;font-size:22px;font-weight:700;padding:10px 20px;display:inline-block;margin-bottom:12px">BROCK</div>
+<div style="color:#94A3B8;font-size:12px;text-transform:uppercase;letter-spacing:0.1em">Project Access Portal</div>
+<div style="color:#4A5568;font-size:11px;font-family:monospace;margin-top:4px">PO 4406147216 · LyondellBasell CC</div>
+</div>
+<div style="height:1px;background:#1E3A5F;margin:16px 0"></div>
+<div style="margin-bottom:12px">
+<label style="display:block;color:#64748B;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">Access Code</label>
+<input id="lu" type="text" placeholder="Enter access code" autocomplete="off" autocapitalize="off" style="width:100%;background:#0D1B2A;border:1px solid #1E3A5F;color:#E2E8F0;font-family:monospace;font-size:13px;padding:10px;box-sizing:border-box;outline:none">
+</div>
+<div style="margin-bottom:16px">
+<label style="display:block;color:#64748B;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">Project PIN</label>
+<input id="lp" type="password" placeholder="••••••" autocomplete="off" style="width:100%;background:#0D1B2A;border:1px solid #1E3A5F;color:#E2E8F0;font-family:monospace;font-size:13px;padding:10px;box-sizing:border-box;outline:none" onkeydown="if(event.key==='Enter')doLogin()">
+</div>
+<button onclick="doLogin()" style="width:100%;background:#C0182A;color:white;border:none;font-family:monospace;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:13px;cursor:pointer">ACCESS REPORT →</button>
+<div id="le" style="color:#FC8181;font-size:11px;font-family:monospace;text-align:center;margin-top:10px;min-height:16px"></div>
+<div style="text-align:center;margin-top:16px;font-size:9px;color:#1E3A5F;font-family:monospace">SAGCO · Strategickhaos DAO LLC · SPRAT L3</div>
+</div>
+</div>
+<script>
+var C={"brock2026":"PO4406","garza":"sprat3","lyb":"corpus","admin":"sagco1"};
+function doLogin(){
+  var u=document.getElementById("lu").value.trim().toLowerCase();
+  var p=document.getElementById("lp").value.trim();
+  if(C[u]&&C[u]===p){
+    sessionStorage.setItem("sa","1");
+    document.getElementById("login-gate").style.display="none";
+  } else {
+    document.getElementById("le").textContent="✗ Invalid — contact D. Garza SPRAT L3";
+    document.getElementById("lp").value="";
+  }
+}
+if(sessionStorage.getItem("sa")) document.addEventListener("DOMContentLoaded",function(){document.getElementById("login-gate").style.display="none";});
+</script>
 
 <!-- HEADER -->
 <header class="hdr">
